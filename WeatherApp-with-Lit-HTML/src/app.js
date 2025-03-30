@@ -14,6 +14,9 @@ document.getElementById('checkbox').addEventListener('click', toggleTheme);
 document.getElementById('input').addEventListener('input', handleInputChange);
 document.getElementById('btn').addEventListener('click', handleSearch);
 
-function handleInputChange(e) {}
+function handleInputChange(e) {
+  city = e.target.value;
+  render(nothing, root);
+}
 
 async function handleSearch() {}
