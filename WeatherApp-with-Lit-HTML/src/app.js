@@ -3,6 +3,9 @@ import { render, nothing } from './utils/lib.js';
 import { getWeatherData } from './utils/api.js';
 import { toggleTheme } from './utils/util.js';
 
+import { loader } from './views/loader.js';
+import { notFound } from './views/notFound.js';
+
 let city = '';
 
 document.body.classList.add('light');
@@ -19,4 +22,17 @@ function handleInputChange(e) {
   render(nothing, root);
 }
 
-async function handleSearch() {}
+async function handleSearch() {
+  if(!city) return;
+  
+  render(loader(), root);
+  const data = await getWeatherData(city);
+  
+  if (data) {
+    console.log(data);
+    // to implement ...
+  } else {
+    console.log('No data!');
+    render(notFound(city), root);
+  }
+}
