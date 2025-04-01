@@ -1,10 +1,11 @@
 import { render, nothing } from './utils/lib.js';
 
 import { getWeatherData } from './utils/api.js';
-import { toggleTheme } from './utils/util.js';
+import { toggleTheme, createBodyData } from './utils/util.js';
 
 import { loader } from './views/loader.js';
 import { notFound } from './views/notFound.js';
+import { generalInfo } from './views/generalInfo.js';
 
 let city = '';
 
@@ -30,6 +31,10 @@ async function handleSearch() {
   
   if (data) {
     console.log(data);
+    render(generalInfo(data), root);
+
+    const bodyData = createBodyData(data);
+    console.log(bodyData);
     // to implement ...
   } else {
     console.log('No data!');
