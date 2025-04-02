@@ -27,11 +27,32 @@ export function createBodyData(data) {
     units: 'km',
     text: 'Visibility'
   };
+  const windSpeed = {
+    icon: 'fa-solid fa-wind',
+    value: data?.wind?.speed,
+    units: 'km/h',
+    text: 'Wind Speed'
+  };
+  const windDirection = {
+    icon: 'fa-solid fa-compass',
+    value: data?.wind?.deg,
+    units: 'deg',
+    text: 'Wind Direction'
+  };
+  const cloudiness = {
+    icon: 'fa-solid fa-cloud',
+    value: data?.clouds?.all,
+    units: '%',
+    text: 'Cloudiness'
+  };
 
   const bodyData = [
     pressure, 
     humidity, 
     visibility, 
+    windSpeed, 
+    windDirection, 
+    cloudiness
   ];
 
   return bodyData;
