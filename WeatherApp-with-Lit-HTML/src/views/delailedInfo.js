@@ -6,4 +6,12 @@ export const detailedInfo = (data) => html`
 </div>
 `;
 
-const infoCard = (cardData) => html``;
+const infoCard = (cardData) => html`
+<div class="border-2 rounded-lg p-2">
+  <h3 class="flex text-center items-center justify-center gap-2 rounded-lg text-2xl">
+    <i class="${cardData.icon}"></i>
+    ${cardData.text + ': '}
+    ${cardData.value + '' + cardData.units}
+  </h3>
+</div>
+`;
