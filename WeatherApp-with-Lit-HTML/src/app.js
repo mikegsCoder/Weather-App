@@ -6,6 +6,7 @@ import { toggleTheme, createBodyData } from './utils/util.js';
 import { loader } from './views/loader.js';
 import { notFound } from './views/notFound.js';
 import { generalInfo } from './views/generalInfo.js';
+import { detailedInfo } from './views/delailedInfo.js';
 
 let city = '';
 
@@ -33,9 +34,9 @@ async function handleSearch() {
     console.log(data);
     render(generalInfo(data), root);
 
+    const detailsContainer = document.getElementById('details-container');
     const bodyData = createBodyData(data);
-    console.log(bodyData);
-    // to implement ...
+    render(detailedInfo(bodyData), detailsContainer);
   } else {
     console.log('No data!');
     render(notFound(city), root);
