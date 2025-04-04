@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
+import { BodyModule } from './body/body.module';
 import { CoreModule } from './core/core.module';
 
 @NgModule({
@@ -11,7 +12,8 @@ import { CoreModule } from './core/core.module';
   imports: [
     BrowserModule,
     HttpClientModule,
-    CoreModule
+    CoreModule,
+    BodyModule
   ],
 })
 export class AppModule {}
