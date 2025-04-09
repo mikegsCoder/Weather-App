@@ -1,0 +1,35 @@
+<ng-template #haveData>
+</ng-template>
+
+<ng-template #loader>
+</ng-template>
+
+<ng-template #notFound>
+</ng-template>
+
+<div class="">
+  <div class="p-5 lg:p-10">
+    <div class="h-56 flex flex-col items-center justify-center ">
+      <div class="text-black grid gap-5">
+        <input 
+          type="text" 
+          class="bg-transparent outline-none border-b-2 w-96 h-12 pl-2 pr-2  capitalize"
+          placeholder="Enter Your City Name"
+          value={{cityName}} 
+          (input)="onInputChange($event)" />
+        <button class="bn3" type="" id="btn" (click)="onGetWeatherData()">
+          Search
+        </button>
+      </div>
+    </div>
+    <ng-container 
+      *ngTemplateOutlet="isLoading ? loader : null">
+    </ng-container>
+    <ng-container 
+      *ngTemplateOutlet="!isLoading && !inputChanges && !weatherData?.name && !onInit ? notFound : null">
+    </ng-container>
+    <ng-container 
+      *ngTemplateOutlet="!isLoading && !inputChanges && weatherData?.name ? haveData : null">
+    </ng-container>
+  </div>
+</div>
