@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
+import { BodyComponent } from './body/body/body.component';
 
 import { BodyModule } from './body/body.module';
 import { CoreModule } from './core/core.module';
@@ -13,6 +14,7 @@ import { CoreModule } from './core/core.module';
   providers: [],
   bootstrap: [
     HeaderComponent,
+    BodyComponent,
     FooterComponent
   ],
   imports: [
