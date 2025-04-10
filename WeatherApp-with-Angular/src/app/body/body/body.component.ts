@@ -34,7 +34,8 @@ export class BodyComponent {
   }
 
   onInputChange(e: any): void {
-    // to implement
+    this.cityName = e.target.value;
+    this.inputChanges = true;
   }
 
   onGetWeatherData(): void {
