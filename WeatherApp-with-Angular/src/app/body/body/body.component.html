@@ -8,6 +8,20 @@
 </ng-template>
 
 <ng-template #notFound>
+  <div 
+    class="border-2 rounded-lg p-2 flex text-center items-center justify-center gap-2 rounded-lg text-4xl"
+    id="not-found"
+  >
+    <i class="fa-regular fa-circle-xmark" id="not-found-icon"></i>
+    <div>
+      <h3 class="flex text-center items-center justify-center gap-2 rounded-lg text-4xl">
+        Invalid city name provided: <strong>{{cityName}}</strong>
+      </h3>
+      <h3 class="flex text-center items-center justify-center gap-2 rounded-lg text-3xl">
+        Please enter a valid city name!
+      </h3>
+    </div>
+  </div>
 </ng-template>
 
 <div class="">
