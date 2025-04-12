@@ -1,4 +1,22 @@
 <ng-template #haveData>
+  <div class="text-center" role="status">
+    <div class="grid">
+      <ng-container 
+        *ngTemplateOutlet="generalInfo">
+      </ng-container>
+      <div class="grid grid-cols-2 gap-5 md:xl:2xl:grid-cols-3 place-content-center">
+        <ng-container 
+          *ngTemplateOutlet="infoCard">
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #generalInfo>
+</ng-template>
+
+<ng-template #infoCard>
 </ng-template>
 
 <ng-template #loader>
