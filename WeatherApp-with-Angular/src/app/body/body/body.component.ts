@@ -63,6 +63,8 @@ export class BodyComponent {
         (data) => {
           console.log(data);
           this.weatherData = data;
+          this.generalData = this.weatherService.getGeneralData(data);
+          console.log(this.generalData);
           // to implement ...
         },
         (err) => {
