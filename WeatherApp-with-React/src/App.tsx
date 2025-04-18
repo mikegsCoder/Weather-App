@@ -1,5 +1,6 @@
-import ErrorBoundary from "./components/ErrorBoundary/";
+import "./assets/css/styles.css";
 
+import ErrorBoundary from "./components/ErrorBoundary/";
 
 function App(): JSX.Element {
 
