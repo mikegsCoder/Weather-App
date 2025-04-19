@@ -12,7 +12,7 @@ const Header = (props: {
   const [theme, setTheme] = useState(Theme[0]);
 
   const toggleTheme = (): void => {
-    // to implement ...
+    theme == Theme[0] ? setTheme(Theme[1]) : setTheme(Theme[0]);
   };
 
   useEffect((): void => {
