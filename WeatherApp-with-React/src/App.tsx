@@ -12,7 +12,6 @@ function App(): JSX.Element {
   return (
     <ErrorBoundary>
       <Header logo={logo} reactTSUrl={reactTSUrl} />
-      <h1>Weather App with React</h1>
       <Footer sourceCode={sourceCodeUrl} dataProviderUrl={dataProviderUrl} />
     </ErrorBoundary>
   );
