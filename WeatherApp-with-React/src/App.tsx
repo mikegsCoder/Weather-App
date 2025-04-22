@@ -7,6 +7,7 @@ import { CityContextProvider } from "./contexts/CityContext";
 
 import ErrorBoundary from "./components/ErrorBoundary/";
 import Header from "./components/Header";
+import Body from "./components/Body"
 import Footer from "./components/Footer";
 
 function App(): JSX.Element {
@@ -15,6 +16,7 @@ function App(): JSX.Element {
     <ErrorBoundary>
       <CityContextProvider>
         <Header logo={logo} reactTSUrl={reactTSUrl} />
+        <Body />
         <Footer sourceCode={sourceCodeUrl} dataProviderUrl={dataProviderUrl} />
       </CityContextProvider>
     </ErrorBoundary>
