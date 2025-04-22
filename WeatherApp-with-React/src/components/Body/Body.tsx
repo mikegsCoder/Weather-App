@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 
 import { useCityContext } from "../../contexts/CityContext";
 
+import CityInput from "./Partials/CityInput/";
+
 import IResponseData from "../../interfaces/IResponseData";
 
 const Body = (): JSX.Element => {
@@ -15,10 +17,14 @@ const Body = (): JSX.Element => {
     setData({} as IResponseData);
   }, [city])
 
+  const handleSearch = async (): Promise<void> => {
+    // to implement ...
+  };
+
   return (
     <div className="">
       <div className="p-5 lg:p-10">
-        <p>Body</p>
+        <CityInput  handleSearch={handleSearch}/>
         {/* To implement ...  */}
       </div>
     </div>
