@@ -6,9 +6,12 @@ import CityInput from "./Partials/CityInput/";
 
 import IResponseData from "../../interfaces/IResponseData";
 
+import { getWeatherData } from "../../dataProviders/weather";
+
 const Body = (): JSX.Element => {
   const { city } = useCityContext();
 
+  const [loading, setLoading] = useState(false);
   const [notFound, setNotFound] = useState(false);
   const [data, setData] = useState({} as IResponseData);
 
@@ -18,7 +21,17 @@ const Body = (): JSX.Element => {
   }, [city])
 
   const handleSearch = async (): Promise<void> => {
-    // to implement ...
+    if (!city?.name) return;
+    setLoading(true);
+    const currentData: IResponseData | null = await getWeatherData(city?.name);
+    if (currentData) {
+      setData(currentData);
+      setLoading(false);
+      setNotFound(false);
+    } else {
+      setLoading(false);
+      setNotFound(true);
+    }
   };
 
   return (
