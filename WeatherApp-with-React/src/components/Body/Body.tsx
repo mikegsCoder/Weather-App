@@ -4,6 +4,7 @@ import { useCityContext } from "../../contexts/CityContext";
 
 import CityInput from "./Partials/CityInput/";
 import Loader from "./Partials/Loader"
+import NotFound from "./Partials/NotFound";
 
 import IResponseData from "../../interfaces/IResponseData";
 
@@ -40,6 +41,7 @@ const Body = (): JSX.Element => {
       <div className="p-5 lg:p-10">
         <CityInput  handleSearch={handleSearch}/>
         { loading ? <Loader/> : null }
+        { !loading && notFound ? <NotFound/> : null }
         {/* To implement ...  */}
       </div>
     </div>
