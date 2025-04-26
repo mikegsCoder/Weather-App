@@ -47,13 +47,30 @@ const Body = (): JSX.Element => {
     }
   };
 
+  const weatherInfo: JSX.Element = (
+    <>
+      <div className="text-center" role="status">
+        <div className="grid">
+          <GeneralInfo data={data} />
+          <div className="grid grid-cols-2 gap-5 md:xl:2xl:grid-cols-3 place-content-center">
+            {infoCards}
+          </div>
+        </div>
+      </div>
+    </>
+  )
+
   return (
     <div className="">
       <div className="p-5 lg:p-10">
         <CityInput  handleSearch={handleSearch}/>
         { loading ? <Loader/> : null }
         { !loading && notFound ? <NotFound/> : null }
-        {/* To implement ...  */}
+        { 
+          !loading && !notFound && Object.keys(data).length > 0 
+            ? weatherInfo 
+            : null
+        }
       </div>
     </div>
   )
