@@ -9,8 +9,10 @@ import Loader from "./Partials/Loader"
 import NotFound from "./Partials/NotFound";
 
 import IResponseData from "../../interfaces/IResponseData";
+import IBodyData from "../../interfaces/IBodyData";
 
 import { getWeatherData } from "../../dataProviders/weather";
+import { createBodyData } from "../../utils/createBodyData";
 
 const Body = (): JSX.Element => {
   const { city } = useCityContext();
@@ -18,6 +20,13 @@ const Body = (): JSX.Element => {
   const [loading, setLoading] = useState(false);
   const [notFound, setNotFound] = useState(false);
   const [data, setData] = useState({} as IResponseData);
+  const [infoCards, setInfoCards] = useState([] as JSX.Element[]);
+
+  useEffect((): void => {
+    const bodyData: IBodyData[] = createBodyData(data);
+    const cards: JSX.Element[] = bodyData.map(data => <InfoCard data={data} key={bodyData.indexOf(data)}/>);
+    setInfoCards(cards);
+  }, [data]);
 
   useEffect((): void => {
     setNotFound(false);
