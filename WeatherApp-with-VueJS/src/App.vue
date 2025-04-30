@@ -1,8 +1,14 @@
 <script setup>
+import { 
+  logo, 
+  vueJSUrl, 
+} from "./constants/appConstants";
+
+import Header from './components/Header.vue';
 </script>
 
 <template>
-  <H1>Wether App with VueJS</H1>
+  <Header :data="{logo, vueJSUrl}"/>
 </template>
 
 <style scoped>
