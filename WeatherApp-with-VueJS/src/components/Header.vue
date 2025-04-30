@@ -49,4 +49,20 @@ const toggleTheme = () => {
 </template>
 
 <style scoped>
+.hr-top {
+  border: 2px solid red;
+  width: 100vw;
+  position: absolute;
+  top: 4.5rem
+}
+
+.toggle-theme {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+#logo {
+  border-radius: 5px;
+}
 </style>
