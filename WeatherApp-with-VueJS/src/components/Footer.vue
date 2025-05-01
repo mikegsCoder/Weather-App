@@ -30,4 +30,10 @@ const props = defineProps({
 </template>
 
 <style scoped>
+.hr-bottom {
+  border: 2px solid red;
+  width: 100vw;
+  position: absolute;
+  bottom: 4.5rem;
+}
 </style>
