@@ -3,6 +3,7 @@ import { ref } from 'vue';
 
 import CityInput from './partials/CityInput.vue';
 import Loader from './partials/Loader.vue';
+import NotFound from './partials/NotFound.vue';
 
 const city = ref('');
 const data = ref({});
@@ -25,7 +26,8 @@ const handleInputChange = () => {
   <div class="p-5 lg:p-10">
     <CityInput @search="handleSearch" @input="handleInputChange" />
     <Loader v-if="loading"/>
-
+    <NotFound v-if="!loading && !inputChanges && notFound" :data="{city}"/>
+    
     <p>Body</p>
   </div>
 </div>
