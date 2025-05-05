@@ -28,4 +28,18 @@ const props = defineProps({
 </template>
 
 <style scoped>
+#not-found {
+  border: 3px solid red !important;
+  color: red;
+  margin-top: 5rem;
+  padding: 1rem;
+}
+
+#not-found>div>h3 {
+  margin: 1rem 6rem;
+}
+
+i {
+  font-size: 110px;
+}
 </style>
