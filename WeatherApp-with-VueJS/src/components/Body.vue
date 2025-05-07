@@ -1,5 +1,7 @@
 <script setup>
 import { ref } from 'vue';
+import { getWeatherData } from "../dataProviders/weather";
+import { createBodyData } from '../utils/createBodyData';
 
 import CityInput from './partials/CityInput.vue';
 import Loader from './partials/Loader.vue';
@@ -14,7 +16,23 @@ const notFound = ref(false);
 const inputChanges = ref(false);
 
 const handleSearch = async (cityName) => {
-  // to implement
+  city.value = cityName;
+  if (cityName == '') return;
+  
+  loading.value = true;
+  notFound.value = false
+  const weather = await getWeatherData(cityName);
+
+  if (weather) {
+    data.value = weather;
+    bodyData.value = createBodyData(weather);
+  } else {
+    data.value = {};
+    notFound.value = true;
+  }
+
+  loading.value = false;
+  inputChanges.value = false;
 };
 
 const handleInputChange = () => {
