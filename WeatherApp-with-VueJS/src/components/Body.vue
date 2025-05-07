@@ -7,6 +7,7 @@ import CityInput from './partials/CityInput.vue';
 import Loader from './partials/Loader.vue';
 import NotFound from './partials/NotFound.vue';
 import GeneralInfo from './partials/GeneralInfo.vue';
+import InfoCard from './partials/InfoCard.vue';
 
 const city = ref('');
 const data = ref({});
@@ -52,7 +53,9 @@ const handleInputChange = () => {
     >
       <div class="grid ">
         <GeneralInfo :data="data" :key="data.cod"/>
-        <!-- To add info cards -->
+        <div class="grid grid-cols-2 gap-5 md:xl:2xl:grid-cols-3 place-content-center">
+          <InfoCard v-for="data in bodyData" :data="data" :key="bodyData.indexOf(data)" />
+        </div>
       </div>
     </div>
   </div>
