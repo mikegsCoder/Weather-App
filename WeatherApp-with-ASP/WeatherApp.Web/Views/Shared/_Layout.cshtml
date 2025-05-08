@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Weather App with ASP.NET Core";
+    ViewData["AspUrl"] = "https://dotnet.microsoft.com/en-us/apps/aspnet/";
+    ViewData["DataProviderUrl"] = "https://openweathermap.org/";
+    ViewData["SourceCodeUrl"] = "https://github.com/mikegsCoder/Weather-App/";
+    ViewData["Icon"] = "~/img/icon.ico";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="icon" href=@ViewData["Icon"] />
+    <!-- CSS -->
+    <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" asp-append-version="true" />
+</head>
+<body>
+
+    <!-- Body -->
+    <div class="p-5 lg:p-10">
+        <div class="h-56 flex flex-col items-center justify-center ">
+            <p>Weather App</p>
+        </div>
+        <!-- Root -->
+        <div id="root">
+            @RenderBody()
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.tailwindcss.com" asp-append-version="true"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>
