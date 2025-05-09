@@ -1,0 +1,17 @@
+﻿<a href=@ViewData["AspUrl"]
+   target="_blank"
+   rel="noreferrer"
+   class="text-3xl flex items-center gap-2 absolute top-2 left-10 font-semibold">
+    <img src="~/img/logo.gif" class="w-[120px]" id="logo" alt="logo" />
+    @* <img src=@ViewData["Logo"] class="w-[120px]" id="logo" alt="logo" /> *@
+    @ViewData["Title"]
+</a>
+<div class="icon-button toggle-theme">
+    <input type="checkbox" class="checkbox" id="checkbox" onclick="toggleTheme();" />
+    <label for="checkbox" class="label top-2 right-10">
+        <i class="fa-regular fa-sun" style="color: yellow;"></i>
+        <i class="fa-regular fa-moon" style="color: white;"></i>
+        <div class="ball"></div>
+    </label>
+</div>
+<hr class='hr-top' />
