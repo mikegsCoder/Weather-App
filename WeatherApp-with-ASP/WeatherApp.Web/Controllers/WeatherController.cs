@@ -11,5 +11,14 @@ namespace WeatherApp.Web.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public async Task<IActionResult> WeatherInfo(string cityName)
+        {
+            if (string.IsNullOrEmpty(cityName)) return View("Index");
+
+            // to implement ...
+            return null;
+        }
     }
 }
