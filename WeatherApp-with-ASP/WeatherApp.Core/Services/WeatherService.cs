@@ -48,7 +48,17 @@ namespace WeatherApp.Core.Services
 
         private GeneralInfoViewModel CreateGeneralInfo (WeatherInfoModel weatherInfo)
         {
-            throw new NotImplementedException();
+            var generalInfo = new GeneralInfoViewModel
+            {
+                Icon = weatherInfo.Weather[0].Icon,
+                Name = weatherInfo.Name,
+                Country = weatherInfo.Sys.Country,
+                Description = weatherInfo.Weather[0].Description,
+                Temp = Math.Floor(weatherInfo.Main.Temp - 273.15).ToString("N0"),
+                FeelsLike = Math.Floor(weatherInfo.Main.Feels_like - 273.15 - 1).ToString("N0")
+            };
+
+            return generalInfo;
         }
     }
 }
