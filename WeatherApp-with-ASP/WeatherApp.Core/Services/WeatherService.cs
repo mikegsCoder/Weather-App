@@ -43,7 +43,63 @@ namespace WeatherApp.Core.Services
 
         private List<InfoCardViewModel> CreateInfoCards(WeatherInfoModel weatherInfo)
         {
-            throw new NotImplementedException();
+            var pressure = new InfoCardViewModel
+            {
+                Icon = "fa-solid fa-gauge-high",
+                Value = weatherInfo.Main.Pressure,
+                Units = "hPa",
+                Text = "Pressure"
+            };
+
+            var humidity = new InfoCardViewModel
+            {
+                Icon = "fa-solid fa-droplet",
+                Value = weatherInfo.Main.Humidity,
+                Units = "%",
+                Text = "Humidity"
+            };
+
+            var visibility = new InfoCardViewModel
+            {
+                Icon = "fa-solid fa-eye",
+                Value = weatherInfo.Visibility / 1000,
+                Units = "km",
+                Text = "Visibility"
+            };
+
+            var windSpeed = new InfoCardViewModel
+            {
+                Icon = "fa-solid fa-wind",
+                Value = weatherInfo.Wind.Speed,
+                Units = "km/h",
+                Text = "Wind Speed"
+            };
+
+            var windDirection = new InfoCardViewModel
+            {
+                Icon = "fa-solid fa-compass",
+                Value = weatherInfo.Wind.Deg,
+                Units = "deg",
+                Text = "Wind Direction"
+            };
+
+            var cloudiness = new InfoCardViewModel
+            {
+                Icon = "fa-solid fa-cloud",
+                Value = weatherInfo.Clouds.All,
+                Units = "%",
+                Text = "Cloudiness"
+            };
+
+            return new List<InfoCardViewModel>
+            {
+                pressure,
+                humidity,
+                visibility,
+                windSpeed,
+                windDirection,
+                cloudiness
+            };
         }
 
         private GeneralInfoViewModel CreateGeneralInfo (WeatherInfoModel weatherInfo)
