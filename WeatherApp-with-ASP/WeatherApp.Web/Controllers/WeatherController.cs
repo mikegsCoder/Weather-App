@@ -32,6 +32,14 @@ namespace WeatherApp.Web.Controllers
             return null;
         }
 
+        [HttpGet]
+        public IActionResult NotFound(string cityName)
+        {
+            ViewBag.CityName = cityName;
+
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
