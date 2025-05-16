@@ -28,8 +28,21 @@ namespace WeatherApp.Web.Controllers
         {
             if (string.IsNullOrEmpty(cityName)) return View("Index");
 
-            // to implement ...
-            return null;
+            try
+            {
+                var info = await _service.GetWeatherInfoAsync(cityName);
+
+                ViewBag.GeneralInfo = info.Item1;
+                ViewBag.InfoCards = info.Item2;
+
+                return null; // to implement view
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(string.Concat(nameof(WeatherController), " - ", nameof(WeatherInfo), ": ", ex.Message), ex);
+
+                return RedirectToAction("NotFound", new { cityName });
+            }
         }
 
         [HttpGet]
