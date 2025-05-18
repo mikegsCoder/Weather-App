@@ -20,3 +20,15 @@ function displayLoader() {
     clearBody();
     document.getElementById('loader').style.display = 'flex';
 }
+
+function onInputHandler() {
+    clearBody();
+}
+
+function clearBody() {
+    const weatherInfo = document.getElementById('weather-info');
+    if (weatherInfo) weatherInfo.style.display = 'none';
+
+    const notFound = document.getElementById('not-found');
+    if (notFound) notFound.style.display = 'none';
+}
