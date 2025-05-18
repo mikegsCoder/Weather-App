@@ -14,3 +14,9 @@ function toggleTheme() {
         document.body.classList.add('dark');
     }
 };
+
+function displayLoader() {
+    if (!input.value) return;
+    clearBody();
+    document.getElementById('loader').style.display = 'flex';
+}
