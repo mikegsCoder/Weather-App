@@ -1,0 +1,21 @@
+﻿@model GeneralInfoViewModel
+
+<div class="flex flex-col items-center justify-center">
+    <h5 class="text-5xl flex items-center gap-5">
+        <img class="object-contain"
+             src="@("https://openweathermap.org/img/wn/" + Model.Icon + "@2x.png")"
+             alt="weather-icon" />
+        <span>
+            @Model.Name,<span> @Model.Country</span>
+        </span>
+    </h5>
+    <h2 class="text-3xl capitalize">
+        @Model.Description
+    </h2>
+    <h6 class="text-7xl gap-2 mb-5 lg:grid">
+        @Model.Temp°C
+        <span class="text-lg text-3xl">
+            Feels Like:@(" " + Model.FeelsLike)°C
+        </span>
+    </h6>
+</div>
