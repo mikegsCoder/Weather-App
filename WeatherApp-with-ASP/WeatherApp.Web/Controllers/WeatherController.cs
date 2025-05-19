@@ -35,7 +35,7 @@ namespace WeatherApp.Web.Controllers
                 ViewBag.GeneralInfo = info.Item1;
                 ViewBag.InfoCards = info.Item2;
 
-                return null; // to implement view
+                return View();
             }
             catch (Exception ex)
             {
