@@ -3,7 +3,7 @@
     <div class="grid grid-cols-2 gap-5 md:xl:2xl:grid-cols-3 place-content-center">
         @foreach (var card in ViewBag.InfoCards)
         {
-            <p>Info Card</p>
+            <partial name="_InfoCardPartial", model=card />
         }
     </div>
 </div>

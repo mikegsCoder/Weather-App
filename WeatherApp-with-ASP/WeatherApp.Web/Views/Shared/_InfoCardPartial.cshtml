@@ -1,0 +1,9 @@
+﻿@model InfoCardViewModel
+
+<div class="border-2 rounded-lg p-2">
+    <h3 class="flex text-center items-center justify-center gap-2 rounded-lg text-2xl">
+        <i class=@Model.Icon></i>
+        @(Model.Text + ": ")
+        @(Model.Value + " " + Model.Units)
+    </h3>
+</div>
