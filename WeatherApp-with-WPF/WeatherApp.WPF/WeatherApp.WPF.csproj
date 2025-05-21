@@ -1,0 +1,146 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Images\cancel.png" />
+    <None Remove="Resources\Images\icon.ico" />
+    <None Remove="Resources\Images\InfoCards\cloud.png" />
+    <None Remove="Resources\Images\InfoCards\compass.png" />
+    <None Remove="Resources\Images\InfoCards\droplet.png" />
+    <None Remove="Resources\Images\InfoCards\eye.png" />
+    <None Remove="Resources\Images\InfoCards\meter.png" />
+    <None Remove="Resources\Images\InfoCards\moon.png" />
+    <None Remove="Resources\Images\InfoCards\sun.png" />
+    <None Remove="Resources\Images\InfoCards\wind.png" />
+    <None Remove="Resources\Images\WeatherIcons\01d.png" />
+    <None Remove="Resources\Images\WeatherIcons\01n.png" />
+    <None Remove="Resources\Images\WeatherIcons\02d.png" />
+    <None Remove="Resources\Images\WeatherIcons\02n.png" />
+    <None Remove="Resources\Images\WeatherIcons\03d.png" />
+    <None Remove="Resources\Images\WeatherIcons\03n.png" />
+    <None Remove="Resources\Images\WeatherIcons\04n.png" />
+    <None Remove="Resources\Images\WeatherIcons\09d.png" />
+    <None Remove="Resources\Images\WeatherIcons\09n.png" />
+    <None Remove="Resources\Images\WeatherIcons\10d.png" />
+    <None Remove="Resources\Images\WeatherIcons\10n.png" />
+    <None Remove="Resources\Images\WeatherIcons\11d.png" />
+    <None Remove="Resources\Images\WeatherIcons\11n.png" />
+    <None Remove="Resources\Images\WeatherIcons\13d.png" />
+    <None Remove="Resources\Images\WeatherIcons\13n.png" />
+    <None Remove="Resources\Images\WeatherIcons\50d.png" />
+    <None Remove="Resources\Images\WeatherIcons\50n.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="App123.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.4" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="9.0.0" />
+    <PackageReference Include="System.Drawing.Common" Version="9.0.0" />
+    <PackageReference Include="WindowsAPICodePack-Shell" Version="1.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Images\cancel.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\icon.ico">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\InfoCards\cloud.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\InfoCards\compass.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\InfoCards\droplet.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\InfoCards\eye.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\InfoCards\meter.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\InfoCards\moon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\InfoCards\sun.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\InfoCards\wind.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\WeatherIcons\01d.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\WeatherIcons\01n.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\WeatherIcons\02d.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\WeatherIcons\02n.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\WeatherIcons\03d.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\WeatherIcons\03n.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\WeatherIcons\04d.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\WeatherIcons\04n.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\WeatherIcons\09d.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\WeatherIcons\09n.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\WeatherIcons\10d.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\WeatherIcons\10n.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\WeatherIcons\11d.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\WeatherIcons\11n.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\WeatherIcons\13d.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\WeatherIcons\13n.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\WeatherIcons\50d.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\WeatherIcons\50n.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resources\Images\logo.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
