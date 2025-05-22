@@ -7,7 +7,22 @@
         xmlns:col="clr-namespace:System.Collections;assembly=mscorlib"
         xmlns:control="clr-namespace:WeatherApp.WPF.Controls"
         mc:Ignorable="d"
+        Style="{DynamicResource WindowStyle}"
         Title="WeatherApp" Height="580" Width="1100" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" ShowInTaskbar="True">
+
+    <!--Window Resources-->
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary x:Name="ThemeDictionary">
+                    <ResourceDictionary.MergedDictionaries>
+                        <ResourceDictionary Source="/Resources/Themes/dark.xaml"/>
+                        <ResourceDictionary Source="/Resources/Themes/light.xaml"/>
+                    </ResourceDictionary.MergedDictionaries>
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
     
     <Grid>
         <Grid.RowDefinitions>
@@ -16,6 +31,10 @@
             <RowDefinition Height="40" />
         </Grid.RowDefinitions>
 
+        <Grid.Resources>
+            <BooleanToVisibilityConverter x:Key="BoolToVisibility" />
+        </Grid.Resources>
+        
         <TextBlock
             Text="Weather App with WPF"
             Grid.Row="0"/>
