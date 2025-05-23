@@ -18,5 +18,10 @@ namespace WeatherApp.WPF.Windows
 
             Application.Current.Shutdown();
         }
+
+        private void WPF_ClickHandler(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

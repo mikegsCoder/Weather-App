@@ -34,10 +34,35 @@
         <Grid.Resources>
             <BooleanToVisibilityConverter x:Key="BoolToVisibility" />
         </Grid.Resources>
-        
-        <TextBlock
-            Text="Weather App with WPF"
-            Grid.Row="0"/>
-        
+
+        <Grid Name="Header" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="400" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="200" />
+            </Grid.ColumnDefinitions>
+
+            <!--WPF Link-->
+            <TextBlock 
+               Grid.Column="0"
+               HorizontalAlignment="Left" 
+               Margin="30,5,30,0">
+               <Hyperlink 
+                   Click="WPF_ClickHandler" 
+                   Style="{DynamicResource HyperlinkStyle}" > 
+                   <MediaElement 
+                       Height="40" 
+                       Width="120" 
+                       LoadedBehavior="Play" 
+                       Source="Resources\Images\logo.gif" />
+                 
+                   <TextBlock
+                       Text="Weather App with WPF"
+                       Margin="0 -13 0 10"/>
+               </Hyperlink>
+            </TextBlock>
+
+        </Grid>
+
     </Grid>
 </Window>
