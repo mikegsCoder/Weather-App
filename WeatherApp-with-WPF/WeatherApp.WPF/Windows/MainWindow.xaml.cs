@@ -7,6 +7,9 @@ namespace WeatherApp.WPF.Windows
     /// </summary>
     public partial class MainWindow : Window
     {
+        public ResourceDictionary ThemeDictionary
+            => Resources.MergedDictionaries[0];
+
         public MainWindow(IServiceProvider services)
         {
             InitializeComponent();
@@ -20,6 +23,11 @@ namespace WeatherApp.WPF.Windows
         }
 
         private void WPF_ClickHandler(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void ToggleTheme_ClickHandler(object sender, RoutedEventArgs e)
         {
             throw new NotImplementedException();
         }
