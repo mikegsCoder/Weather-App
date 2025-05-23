@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using Microsoft.Extensions.DependencyInjection;
+using System.Windows;
+using WeatherApp.WPF.DataContexts;
 
 namespace WeatherApp.WPF.Windows
 {
@@ -7,11 +9,15 @@ namespace WeatherApp.WPF.Windows
     /// </summary>
     public partial class MainWindow : Window
     {
+        private MainWindowContext context;
+
         public ResourceDictionary ThemeDictionary
             => Resources.MergedDictionaries[0];
 
         public MainWindow(IServiceProvider services)
         {
+            context = services.GetRequiredService<MainWindowContext>();
+
             InitializeComponent();
         }
 

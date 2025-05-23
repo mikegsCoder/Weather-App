@@ -1,4 +1,5 @@
 ﻿using WeatherApp.WPF;
+using WeatherApp.WPF.DataContexts;
 using WeatherApp.WPF.Windows;
 
 namespace Microsoft.Extensions.DependencyInjection
@@ -10,6 +11,7 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddHttpClient();
             services.AddSingleton<App>();
             services.AddSingleton<MainWindow>();
+            services.AddScoped<MainWindowContext>();
 
             return services;
         }
