@@ -19,6 +19,8 @@ namespace WeatherApp.WPF.Windows
             context = services.GetRequiredService<MainWindowContext>();
 
             InitializeComponent();
+
+            DataContext = context;
         }
 
         protected override void OnClosed(EventArgs e)
@@ -35,7 +37,19 @@ namespace WeatherApp.WPF.Windows
 
         private void ToggleTheme_ClickHandler(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            context.ThemeIsLight = !context.ThemeIsLight;
+
+            SetTheme();
+        }
+
+        private void SetTheme()
+        {
+            string theme = context.ThemeIsLight ? "light" : "dark";
+
+            var uri = new Uri(@"\Resources\Themes\" + theme + ".xaml", UriKind.Relative);
+
+            ThemeDictionary.MergedDictionaries.Clear();
+            ThemeDictionary.MergedDictionaries.Add(new ResourceDictionary() { Source = uri });
         }
     }
 }
