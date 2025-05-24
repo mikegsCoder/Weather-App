@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using System.Diagnostics;
 using System.Windows;
+using WeatherApp.Core.Constants;
 using WeatherApp.WPF.DataContexts;
 
 namespace WeatherApp.WPF.Windows
@@ -31,9 +33,7 @@ namespace WeatherApp.WPF.Windows
         }
 
         private void WPF_ClickHandler(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+            => OpenLink(UrlConstants.WpfUrl);
 
         private void ToggleTheme_ClickHandler(object sender, RoutedEventArgs e)
         {
@@ -50,6 +50,13 @@ namespace WeatherApp.WPF.Windows
 
             ThemeDictionary.MergedDictionaries.Clear();
             ThemeDictionary.MergedDictionaries.Add(new ResourceDictionary() { Source = uri });
+        }
+
+        private void OpenLink(string url)
+        {
+            var sInfo = new ProcessStartInfo(url) { UseShellExecute = true };
+
+            Process.Start(sInfo);
         }
     }
 }
