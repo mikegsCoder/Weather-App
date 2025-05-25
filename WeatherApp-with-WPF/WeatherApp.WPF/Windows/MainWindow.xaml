@@ -120,5 +120,11 @@
             </Separator.RenderTransform>
         </Separator>
 
+        <!--Bottom Separator-->
+        <Separator Grid.Row="1" Background="Red" VerticalAlignment="Bottom" >
+            <Separator.RenderTransform>
+                <ScaleTransform ScaleY="2" />
+            </Separator.RenderTransform>
+        </Separator>
     </Grid>
 </Window>
