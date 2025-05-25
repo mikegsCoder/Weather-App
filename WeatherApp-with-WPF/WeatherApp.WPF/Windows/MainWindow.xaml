@@ -35,6 +35,7 @@
             <BooleanToVisibilityConverter x:Key="BoolToVisibility" />
         </Grid.Resources>
 
+        <!--Header-->
         <Grid Name="Header" Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="400" />
@@ -111,6 +112,13 @@
                 </WrapPanel>
             </Border>
         </Grid>
+
+        <!--Top Separator-->
+        <Separator Grid.Row="1" Background="Red" VerticalAlignment="Top" >
+            <Separator.RenderTransform>
+                <ScaleTransform ScaleY="2" />
+            </Separator.RenderTransform>
+        </Separator>
 
     </Grid>
 </Window>
