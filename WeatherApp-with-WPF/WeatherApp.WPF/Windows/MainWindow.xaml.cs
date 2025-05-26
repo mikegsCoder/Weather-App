@@ -15,7 +15,7 @@ namespace WeatherApp.WPF.Windows
 
         public ResourceDictionary ThemeDictionary
             => Resources.MergedDictionaries[0];
-
+ 
         public MainWindow(IServiceProvider services)
         {
             context = services.GetRequiredService<MainWindowContext>();
@@ -34,6 +34,9 @@ namespace WeatherApp.WPF.Windows
 
         private void WPF_ClickHandler(object sender, RoutedEventArgs e)
             => OpenLink(UrlConstants.WpfUrl);
+
+        private void DataProvider_ClickHandler(object sender, RoutedEventArgs e)
+              => OpenLink(UrlConstants.DataProviderUrl);
 
         private void ToggleTheme_ClickHandler(object sender, RoutedEventArgs e)
         {

@@ -126,5 +126,27 @@
                 <ScaleTransform ScaleY="2" />
             </Separator.RenderTransform>
         </Separator>
+
+        <!--Footer-->
+        <Grid Name="Footer" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="200" />
+            </Grid.ColumnDefinitions>
+
+            <!--Data Provider Link-->
+            <TextBlock 
+               Grid.Column="0"
+               HorizontalAlignment="Left" 
+               Margin="30,8,30,0">
+               <Hyperlink 
+                   Click="DataProvider_ClickHandler"
+                   Style="{DynamicResource HyperlinkStyle}"> 
+                   Data Provider
+               </Hyperlink>
+            </TextBlock>
+
+        </Grid>
     </Grid>
 </Window>
