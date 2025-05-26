@@ -36,7 +36,10 @@ namespace WeatherApp.WPF.Windows
             => OpenLink(UrlConstants.WpfUrl);
 
         private void DataProvider_ClickHandler(object sender, RoutedEventArgs e)
-              => OpenLink(UrlConstants.DataProviderUrl);
+            => OpenLink(UrlConstants.DataProviderUrl);
+
+        private void SourceCode_ClickHandler(object sender, RoutedEventArgs e)
+            => OpenLink(UrlConstants.SourceCodeUrl);
 
         private void ToggleTheme_ClickHandler(object sender, RoutedEventArgs e)
         {

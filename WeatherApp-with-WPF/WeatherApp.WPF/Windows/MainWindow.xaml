@@ -147,6 +147,17 @@
                </Hyperlink>
             </TextBlock>
 
+            <!--Source Code Link-->
+            <TextBlock 
+                Grid.Column="2"
+                HorizontalAlignment="Right" 
+                Margin="30,8,30,0">
+                <Hyperlink 
+                    Click="SourceCode_ClickHandler" 
+                    Style="{DynamicResource HyperlinkStyle}"> 
+                    Source Code
+                </Hyperlink>
+            </TextBlock>
         </Grid>
     </Grid>
 </Window>
