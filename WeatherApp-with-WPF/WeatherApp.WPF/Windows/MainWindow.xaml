@@ -147,6 +147,25 @@
                </Hyperlink>
             </TextBlock>
 
+            <!--Export Data-->
+            <Menu
+                Grid.Column="1"
+                HorizontalAlignment="Center" 
+                Margin="30,3,30,0"
+                FlowDirection="LeftToRight"
+                Style="{DynamicResource MenuStyle}"
+                Visibility="{Binding Path=HasCity, Converter={StaticResource BoolToVisibility}}">
+                    <MenuItem 
+                        Name="menuitem" 
+                        Height="30"
+                        Width="124"
+                        Padding="15 0"
+                        Header="💾 Export Data">
+                        <MenuItem Header="JSON" Click="ExportJson_ClickHandler" Style="{DynamicResource MenuItemStyle}" />
+                        <MenuItem Header="XML" Click="ExportXml_ClickHandler" Style="{DynamicResource MenuItemStyle}" />
+                    </MenuItem>
+            </Menu>
+
             <!--Source Code Link-->
             <TextBlock 
                 Grid.Column="2"

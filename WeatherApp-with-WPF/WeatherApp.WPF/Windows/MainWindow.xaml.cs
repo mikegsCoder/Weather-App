@@ -41,6 +41,16 @@ namespace WeatherApp.WPF.Windows
         private void SourceCode_ClickHandler(object sender, RoutedEventArgs e)
             => OpenLink(UrlConstants.SourceCodeUrl);
 
+        private void ExportJson_ClickHandler(object sender, RoutedEventArgs e)
+        { 
+            throw new NotImplementedException();
+        }
+
+        private void ExportXml_ClickHandler(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         private void ToggleTheme_ClickHandler(object sender, RoutedEventArgs e)
         {
             context.ThemeIsLight = !context.ThemeIsLight;
