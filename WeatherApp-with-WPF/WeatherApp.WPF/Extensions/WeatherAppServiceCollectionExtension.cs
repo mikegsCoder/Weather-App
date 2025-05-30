@@ -1,4 +1,7 @@
-﻿using WeatherApp.WPF;
+﻿using System.Net.Http;
+using WeatherApp.Core.Contracts;
+using WeatherApp.Core.Services;
+using WeatherApp.WPF;
 using WeatherApp.WPF.DataContexts;
 using WeatherApp.WPF.Windows;
 
@@ -12,6 +15,8 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddSingleton<App>();
             services.AddSingleton<MainWindow>();
             services.AddScoped<MainWindowContext>();
+            services.AddScoped<HttpClient>();
+            services.AddScoped(typeof(IWeatherService), typeof(WeatherService));
 
             return services;
         }
