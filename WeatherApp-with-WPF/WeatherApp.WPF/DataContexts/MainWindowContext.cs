@@ -11,6 +11,7 @@ namespace WeatherApp.WPF.DataContexts
         private string? city = null;
         private bool hasCity = false;
         private bool notFound = false;
+        private bool loading = false;
         private bool themeIsLight = true;
 
         public bool ThemeIsLight
@@ -45,6 +46,12 @@ namespace WeatherApp.WPF.DataContexts
         {
             get { return notFound; }
             set { notFound = value; NotifyPropertyChanged("NotFound"); }
+        }
+
+        public bool Loading
+        {
+            get { return loading; }
+            set { loading = value; NotifyPropertyChanged("Loading"); }
         }
 
         public void NotifyPropertyChanged(string info)
