@@ -8,6 +8,7 @@ namespace WeatherApp.WPF.DataContexts
 {
     public class MainWindowContext : INotifyPropertyChanged
     {
+        private string? city = null;
         private bool hasCity = false;
         private bool themeIsLight = true;
 
@@ -25,6 +26,12 @@ namespace WeatherApp.WPF.DataContexts
         public bool ThemeIsDark
         {
             get { return !themeIsLight; }
+        }
+
+        public string City
+        {
+            get { return city; }
+            set { city = value; NotifyPropertyChanged("City"); }
         }
 
         public bool HasCity
