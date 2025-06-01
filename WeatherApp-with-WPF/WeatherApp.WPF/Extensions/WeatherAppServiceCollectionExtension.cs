@@ -17,6 +17,7 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddScoped<MainWindowContext>();
             services.AddScoped<HttpClient>();
             services.AddScoped(typeof(IWeatherService), typeof(WeatherService));
+            services.AddScoped(typeof(IFileService), typeof(FileService));
 
             return services;
         }
