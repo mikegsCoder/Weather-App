@@ -17,6 +17,7 @@ namespace WeatherApp.WPF.DataContexts
         private bool themeIsLight = true;
         private WeatherInfoModel? weatherData;
         private GeneralInfoViewModel? generalInfo = null;
+        private List<InfoCardViewModel>? infoCards = null;
 
         public WeatherInfoModel WeatherData
         {
@@ -78,6 +79,12 @@ namespace WeatherApp.WPF.DataContexts
         public string Icon
         {
             get { return @"/Resources/Images/WeatherIcons/" + generalInfo?.Icon.Substring(0, 3) + ".png"; }
+        }
+
+        public List<InfoCardViewModel> InfoCards
+        {
+            get { return infoCards; }
+            set { infoCards = value; NotifyPropertyChanged("InfoCards"); }
         }
 
         public void NotifyPropertyChanged(string info)
