@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WeatherApp.Core.Models.DTO;
 
 namespace WeatherApp.WPF.DataContexts
 {
@@ -13,6 +14,13 @@ namespace WeatherApp.WPF.DataContexts
         private bool notFound = false;
         private bool loading = false;
         private bool themeIsLight = true;
+        private WeatherInfoModel? weatherData;
+
+        public WeatherInfoModel WeatherData
+        {
+            get { return weatherData; }
+            set { weatherData = value; }
+        }
 
         public bool ThemeIsLight
         {
