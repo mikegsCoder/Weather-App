@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Windows;
 using WeatherApp.Core.Constants;
+using WeatherApp.WPF.Controllers;
 using WeatherApp.WPF.DataContexts;
 
 namespace WeatherApp.WPF.Windows
@@ -11,6 +12,7 @@ namespace WeatherApp.WPF.Windows
     /// </summary>
     public partial class MainWindow : Window
     {
+        private WeatherController weatherController;
         private MainWindowContext context;
 
         public ResourceDictionary ThemeDictionary
@@ -19,6 +21,7 @@ namespace WeatherApp.WPF.Windows
         public MainWindow(IServiceProvider services)
         {
             context = services.GetRequiredService<MainWindowContext>();
+            weatherController = services.GetRequiredService<WeatherController>();
 
             InitializeComponent();
 
