@@ -17,5 +17,14 @@ namespace WeatherApp.WPF.Windows.MessageBoxes
                 MessageBoxButton.OK,
                 MessageBoxImage.Error);
         }
+
+        public static void ShowSuccess(string message)
+        {
+            MessageBox.Show(
+                message,
+                "Success",
+                MessageBoxButton.OK,
+                MessageBoxImage.Information);
+        }
     }
 }
