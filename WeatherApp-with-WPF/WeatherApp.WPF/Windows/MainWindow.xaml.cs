@@ -44,6 +44,9 @@ namespace WeatherApp.WPF.Windows
         private void SourceCode_ClickHandler(object sender, RoutedEventArgs e)
             => OpenLink(UrlConstants.SourceCodeUrl);
 
+        private void CityInput_ChangeHandler(object sender, RoutedEventArgs e)
+            => context.HasCity = context.NotFound = false;
+
         private void ExportJson_ClickHandler(object sender, RoutedEventArgs e)
         { 
             throw new NotImplementedException();
