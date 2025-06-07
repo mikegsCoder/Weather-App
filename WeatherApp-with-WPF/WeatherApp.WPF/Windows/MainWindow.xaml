@@ -147,6 +147,18 @@
                 BorderThickness="0 0 0 1"
                 HorizontalAlignment="Center"
                 TextChanged="CityInput_ChangeHandler"/>
+
+            <!--Search Button-->
+            <Button 
+                Grid.Row="0" 
+                Content="Search" 
+                Margin="0 50 0 0"
+                Height="30"
+                Width="255"
+                BorderThickness="2"
+                Style="{DynamicResource ButtonStyle}"
+                Click="SearchBtn_ClickHandler" />
+
         </Grid>
         
         <!--Footer-->

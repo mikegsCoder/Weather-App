@@ -47,6 +47,11 @@ namespace WeatherApp.WPF.Windows
         private void CityInput_ChangeHandler(object sender, RoutedEventArgs e)
             => context.HasCity = context.NotFound = false;
 
+        private void SearchBtn_ClickHandler(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         private void ExportJson_ClickHandler(object sender, RoutedEventArgs e)
         { 
             throw new NotImplementedException();
