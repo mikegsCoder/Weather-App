@@ -49,7 +49,14 @@ namespace WeatherApp.WPF.Windows
 
         private void SearchBtn_ClickHandler(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            string cityName = CityInput.Text.Trim();
+
+            if (string.IsNullOrEmpty(cityName)) return;
+
+            string capitalized = string.Concat(cityName[0].ToString().ToUpper(), cityName.AsSpan(1));
+            CityInput.Text = capitalized;
+
+            weatherController.GetWeatherInfo(cityName);
         }
 
         private void ExportJson_ClickHandler(object sender, RoutedEventArgs e)
