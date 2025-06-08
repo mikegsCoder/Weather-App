@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -64,7 +65,16 @@ namespace WeatherApp.WPF.Controllers
 
         private GeneralInfoViewModel CreateGeneralInfo(WeatherInfoModel weatherInfo)
         {
-            throw new NotImplementedException();
+            var generalInfo = new GeneralInfoViewModel
+            {
+                Icon = weatherInfo.Weather[0].Icon,
+                NameAndCountry = weatherInfo.Name + ", " + weatherInfo.Sys.Country,
+                Description = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(weatherInfo.Weather[0].Description.ToLower()),
+                Temperature = Math.Floor(weatherInfo.Main.Temp - 273.15).ToString("N0") + "°C",
+                FeelsLike = "Feels Like: " + Math.Floor(weatherInfo.Main.Feels_like - 273.15 - 1).ToString("N0") + "°C"
+            };
+
+            return generalInfo;
         }
     }
 }
