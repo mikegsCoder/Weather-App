@@ -60,7 +60,51 @@ namespace WeatherApp.WPF.Controllers
 
         private List<InfoCardViewModel> CreateInfoCards(WeatherInfoModel weatherInfo)
         {
-            throw new NotImplementedException();
+            var pressure = new InfoCardViewModel
+            {
+                Icon = @"/Resources/Images/InfoCards/meter.png",
+                Content = "Pressure: " + weatherInfo.Main.Pressure + "hPa"
+            };
+
+            var humidity = new InfoCardViewModel
+            {
+                Icon = @"/Resources/Images/InfoCards/droplet.png",
+                Content = "Humidity: " + weatherInfo.Main.Humidity + "%"
+            };
+
+            var visibility = new InfoCardViewModel
+            {
+                Icon = @"/Resources/Images/InfoCards/eye.png",
+                Content = "Visibility: " + weatherInfo.Visibility / 1000 + "km"
+            };
+
+            var windSpeed = new InfoCardViewModel
+            {
+                Icon = @"/Resources/Images/InfoCards/wind.png",
+                Content = "Wind Speed: " + weatherInfo.Wind.Speed + "km/h"
+            };
+
+            var windDirection = new InfoCardViewModel
+            {
+                Icon = @"/Resources/Images/InfoCards/compass.png",
+                Content = "Wind Direction: " + weatherInfo.Wind.Deg + "deg"
+            };
+
+            var cloudiness = new InfoCardViewModel
+            {
+                Icon = @"/Resources/Images/InfoCards/cloud.png",
+                Content = "Cloudiness: " + weatherInfo.Clouds.All + "%"
+            };
+
+            return new List<InfoCardViewModel>
+            {
+                pressure,
+                humidity,
+                visibility,
+                windSpeed,
+                windDirection,
+                cloudiness
+            };
         }
 
         private GeneralInfoViewModel CreateGeneralInfo(WeatherInfoModel weatherInfo)
