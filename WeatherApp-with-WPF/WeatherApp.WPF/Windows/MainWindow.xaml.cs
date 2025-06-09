@@ -63,9 +63,7 @@ namespace WeatherApp.WPF.Windows
             => weatherController.ExportWeatherData("json");
 
         private void ExportXml_ClickHandler(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+            => weatherController.ExportWeatherData("xml");
 
         private void ToggleTheme_ClickHandler(object sender, RoutedEventArgs e)
         {
