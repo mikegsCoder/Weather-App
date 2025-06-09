@@ -1,14 +1,18 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.WindowsAPICodePack.Dialogs;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WeatherApp.Core.Constants;
 using WeatherApp.Core.Contracts;
 using WeatherApp.Core.Models.DTO;
 using WeatherApp.Core.Models.ViewModels;
 using WeatherApp.WPF.DataContexts;
+using static WeatherApp.WPF.Windows.MessageBoxes.MessageBoxes;
+
 
 namespace WeatherApp.WPF.Controllers
 {
@@ -52,10 +56,36 @@ namespace WeatherApp.WPF.Controllers
                 context.Loading = false;
             }
         }
-        
+
         public void ExportWeatherData(string format)
         {
-            throw new NotImplementedException();
+            string path;
+
+            try
+            {
+                var dialog = new CommonOpenFileDialog();
+                dialog.Title = "Select location to save weather data:";
+                dialog.IsFolderPicker = true;
+                CommonFileDialogResult result = dialog.ShowDialog();
+
+                path = dialog.FileName;
+            }
+            catch (Exception ex)
+            {
+                ShowError(MessageConstants.FolderSelectionError);
+                return;
+            }
+
+            try
+            {
+                fileService.ExportWeatherDataAsync(context.WeatherData, path, format);
+
+                ShowSuccess(string.Format(MessageConstants.DataExportSuccess, path, format));
+            }
+            catch (Exception ex)
+            {
+                ShowError(MessageConstants.DataExportError);
+            }
         }
 
         private List<InfoCardViewModel> CreateInfoCards(WeatherInfoModel weatherInfo)
