@@ -60,9 +60,7 @@ namespace WeatherApp.WPF.Windows
         }
 
         private void ExportJson_ClickHandler(object sender, RoutedEventArgs e)
-        { 
-            throw new NotImplementedException();
-        }
+            => weatherController.ExportWeatherData("json");
 
         private void ExportXml_ClickHandler(object sender, RoutedEventArgs e)
         {
