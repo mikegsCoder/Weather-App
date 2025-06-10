@@ -203,7 +203,14 @@
                         Text="{Binding GeneralInfo.NameAndCountry}" />
 
                 </Grid>
-                
+
+                <!--Description-->
+                <TextBlock 
+                    Grid.Row="0" 
+                    HorizontalAlignment="Center" 
+                    Margin="0 80 0 0"
+                    Text="{Binding GeneralInfo.Description}" />
+
             </Grid>
         
         <!--Footer-->
