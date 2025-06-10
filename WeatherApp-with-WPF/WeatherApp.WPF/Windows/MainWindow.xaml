@@ -159,7 +159,52 @@
                 Style="{DynamicResource ButtonStyle}"
                 Click="SearchBtn_ClickHandler" />
 
-        </Grid>
+            <!--Weather Info-->
+            <Grid 
+                Name="WeatherInfo" 
+                Grid.Row="1"
+                Visibility="{Binding Path=HasCity, Converter={StaticResource BoolToVisibility}}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="180" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <!--General Info-->
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <!--Weather Icon Background-->
+                    <Ellipse 
+                        Grid.Column="0"
+                        HorizontalAlignment="Right"
+                        Margin="0 -90 40 0"
+                        Height="70"
+                        Width="70"
+                        Fill="Gray" />
+
+                    <!--Weather Icon-->
+                    <Image 
+                        Grid.Column="0"
+                        Height="80" 
+                        Width="77" 
+                        HorizontalAlignment="Right" 
+                        Margin="0 -90 36 0"
+                        Source="{Binding Icon}"/>
+
+                    <!--City Name and Country-->
+                    <TextBlock 
+                        Grid.Column="1" 
+                        HorizontalAlignment="Left" 
+                        Margin="-20 25 0 0" 
+                        FontSize="30" 
+                        Text="{Binding GeneralInfo.NameAndCountry}" />
+
+                </Grid>
+                
+            </Grid>
         
         <!--Footer-->
         <Grid Name="Footer" Grid.Row="2">
