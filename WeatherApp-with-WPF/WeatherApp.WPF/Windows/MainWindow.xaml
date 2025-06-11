@@ -201,7 +201,6 @@
                         Margin="-20 25 0 0" 
                         FontSize="30" 
                         Text="{Binding GeneralInfo.NameAndCountry}" />
-
                 </Grid>
 
                 <!--Description-->
@@ -211,8 +210,15 @@
                     Margin="0 80 0 0"
                     Text="{Binding GeneralInfo.Description}" />
 
+                <!--Temperature-->
+                <TextBlock 
+                    Grid.Row="0" 
+                    HorizontalAlignment="Center" 
+                    Margin="0 95 0 5"
+                    FontSize="50"
+                    Text="{Binding GeneralInfo.Temperature}" />
             </Grid>
-        
+        </Grid>
         <!--Footer-->
         <Grid Name="Footer" Grid.Row="2">
             <Grid.ColumnDefinitions>
