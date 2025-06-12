@@ -253,7 +253,22 @@
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
 
-                    <!--To add infocards-->
+                    <!--InfoCard Pressusre-->
+                    <Border 
+                        Grid.Row="0" 
+                        Grid.Column="0"
+                        Style="{DynamicResource BorderStyle}">
+                        <WrapPanel>
+                            <Image 
+                                Height="33"
+                                Width="33"
+                                Margin="0 -4 7 0"
+                                Source="{Binding InfoCards[0].Icon}"/>
+
+                            <TextBlock Text="{Binding InfoCards[0].Content}" />
+                        </WrapPanel>
+                    </Border>
+                    
                 </Grid>
             </Grid>
         </Grid>
