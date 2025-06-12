@@ -268,7 +268,18 @@
                             <TextBlock Text="{Binding InfoCards[0].Content}" />
                         </WrapPanel>
                     </Border>
-                    
+
+                    <!--InfoCard Humidity-->
+                    <Border 
+                        Grid.Row="0" 
+                        Grid.Column="1"
+                        Style="{DynamicResource BorderStyle}">
+                        <WrapPanel>
+                            <Image Source="{Binding InfoCards[1].Icon}"/>
+                            <TextBlock Text="{Binding InfoCards[1].Content}" />
+                        </WrapPanel>
+                    </Border>
+
                 </Grid>
             </Grid>
         </Grid>
