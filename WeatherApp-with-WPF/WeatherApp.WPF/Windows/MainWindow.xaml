@@ -302,6 +302,17 @@
                         </WrapPanel>
                     </Border>
 
+                    <!--InfoCard WindDirection-->
+                    <Border 
+                        Grid.Row="1" 
+                        Grid.Column="1"
+                        Style="{DynamicResource BorderStyle}">
+                        <WrapPanel>
+                            <Image Source="{Binding InfoCards[4].Icon}"/>
+                            <TextBlock Text="{Binding InfoCards[4].Content}" />
+                        </WrapPanel>
+                    </Border>
+
                 </Grid>
             </Grid>
         </Grid>
