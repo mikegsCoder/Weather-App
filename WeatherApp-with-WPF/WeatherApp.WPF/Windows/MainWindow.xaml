@@ -291,6 +291,17 @@
                         </WrapPanel>
                     </Border>
 
+                    <!--InfoCard WindSpeed-->
+                    <Border 
+                        Grid.Row="1" 
+                        Grid.Column="0"
+                        Style="{DynamicResource BorderStyle}">
+                        <WrapPanel>
+                            <Image Source="{Binding InfoCards[3].Icon}"/>
+                            <TextBlock Text="{Binding InfoCards[3].Content}" />
+                        </WrapPanel>
+                    </Border>
+
                 </Grid>
             </Grid>
         </Grid>
