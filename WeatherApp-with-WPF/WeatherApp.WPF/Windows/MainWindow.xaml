@@ -313,6 +313,16 @@
                         </WrapPanel>
                     </Border>
 
+                    <!--InfoCard Cloudiness-->
+                    <Border 
+                        Grid.Row="1" 
+                        Grid.Column="2"
+                        Style="{DynamicResource BorderStyle}">
+                        <WrapPanel>
+                            <Image Source="{Binding InfoCards[5].Icon}"/>
+                            <TextBlock Text="{Binding InfoCards[5].Content}" />
+                        </WrapPanel>
+                    </Border>
                 </Grid>
             </Grid>
         </Grid>
