@@ -1,15 +1,6 @@
 ﻿using WeatherApp.Core.Contracts;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Net.Http;
-using System.ComponentModel.DataAnnotations;
-using System.Reflection;
 using WeatherApp.Core.Models.DTO;
-using System.Globalization;
 using WeatherApp.Core.Constants;
 using Microsoft.Extensions.DependencyInjection;
 
