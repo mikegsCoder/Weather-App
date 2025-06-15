@@ -1,8 +1,5 @@
-﻿using System;
-using Microsoft.Extensions.Hosting;
+﻿using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.DependencyInjection;
-using System.Threading.Tasks;
-using System.Configuration;
 
 namespace WeatherApp.WPF
 {

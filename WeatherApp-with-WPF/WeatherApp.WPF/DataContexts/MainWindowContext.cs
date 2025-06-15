@@ -1,8 +1,4 @@
-﻿using System;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 using WeatherApp.Core.Models.DTO;
 using WeatherApp.Core.Models.ViewModels;
 
