@@ -371,6 +371,18 @@
                     </TextBlock>
                 </Grid>
             </Border>
+
+            <!--LoadingSpinner-->
+            <Grid
+                Name="LoadingSpinner"
+                Grid.Row="1"
+                Visibility="{Binding Path=Loading, Converter={StaticResource BoolToVisibility}}">
+                <control:LoadingAnimation HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <control:LoadingAnimation.RenderTransform>
+                        <ScaleTransform CenterX="40" CenterY="60" ScaleX="2.5" ScaleY="2.5" />
+                    </control:LoadingAnimation.RenderTransform>
+                </control:LoadingAnimation>
+            </Grid>
         </Grid>
 
         <!--Footer-->
