@@ -1,4 +1,4 @@
-const env_apiKey = import.meta.env.API_KEY;
+const env_apiKey = process.env.VUE_APP_API_KEY;
 
 const apiKey =  env_apiKey || 'Your-API-Key';
 const logo = './img/logo.gif';
