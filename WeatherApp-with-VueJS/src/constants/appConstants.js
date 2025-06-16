@@ -1,4 +1,4 @@
-const apiKey =  process.env.Api-Key ||'Your-API-Key';
+const apiKey =  process.env.APIKEY ||'Your-API-Key';
 const logo = './img/logo.gif';
 const baseUrl =  'https://api.openweathermap.org/data/2.5/';
 const sourceCodeUrl = 'https://github.com/mikegsCoder/Weather-App/';
