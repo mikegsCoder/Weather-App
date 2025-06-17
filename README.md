@@ -3,9 +3,11 @@
 :dart:  A simple Weather app built with different technologies. You can enter your city name and the application will provide you with weather data. If such a city does not exist you will be warned that invalid city name is provided. You can switch betwwen Light and Dark theme.
 
 ## 🔗 **Link to the project:**
+
 &nbsp;&nbsp;&nbsp;&nbsp;**[Weather-App](https://my-weather-app-vi51.onrender.com/)**
 
 ## :hammer_and_wrench: Technologies and Tools used:
+
 - Angular and TypeScript for the Angular project
 - VueJS and JavaScript for the VueJS project
 - React and TypeScript for the React project
@@ -42,7 +44,7 @@
 
 ![PhotoSite-HomePage](https://mikegscoder.github.io/img/WeatherApp/LoaderLight.jpg)
 
-## :framed_picture: Screenshot - Loading Spinner Theme:
+## :framed_picture: Screenshot - Loading Spinner Dark Theme:
 
 ![PhotoSite-HomePage](https://mikegscoder.github.io/img/WeatherApp/LoaderDark.jpg)
 
