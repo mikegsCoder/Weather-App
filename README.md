@@ -48,6 +48,10 @@
 
 ![PhotoSite-HomePage](https://mikegscoder.github.io/img/WeatherApp/LoaderDark.jpg)
 
+## :framed_picture: Screenshot - Weather Data Export:
+
+![PhotoSite-HomePage](https://mikegscoder.github.io/img/WeatherApp/WeatherDataExport.jpg)
+
 ## 📖 License:
 
 This project is licensed under the [MIT License](LICENSE).
