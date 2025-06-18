@@ -1,6 +1,6 @@
 # Weather-App
 
-:dart:  A simple Weather app built with different technologies. You can enter your city name and the application will provide you with weather data. If such a city does not exist you will be warned that invalid city name is provided. You can switch betwwen Light and Dark theme. In WPF project you have an option to export weather data in JSON or XML format.
+:dart:  A simple Weather app built with different technologies. You can enter your city name and the application will provide you with weather data. If such a city does not exist you will be warned that invalid city name is provided. You can switch between Light and Dark theme. In WPF project you have an option to export weather data in JSON or XML format.
 
 ## 🔗 **Link to the project:**
 
