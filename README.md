@@ -18,39 +18,43 @@
 
 ## :framed_picture: Screenshot - Main Window Light Theme:
 
-![PhotoSite-HomePage](https://mikegscoder.github.io/img/WeatherApp/MainWindowLight.jpg)
+![WeatherApp-MainPageLight](https://mikegscoder.github.io/img/WeatherApp/MainWindowLight.jpg)
 
 ## :framed_picture: Screenshot - Main Window Dark Theme:
 
-![PhotoSite-HomePage](https://mikegscoder.github.io/img/WeatherApp/MainWindowDark.jpg)
+![WeatherApp-MainPageDark](https://mikegscoder.github.io/img/WeatherApp/MainWindowDark.jpg)
 
 ## :framed_picture: Screenshot - Search Result Light Theme:
 
-![PhotoSite-HomePage](https://mikegscoder.github.io/img/WeatherApp/SearchResultLight.jpg)
+![WeatherApp-SearchResultLight](https://mikegscoder.github.io/img/WeatherApp/SearchResultLight.jpg)
 
 ## :framed_picture: Screenshot - Search Result Dark Theme:
 
-![PhotoSite-HomePage](https://mikegscoder.github.io/img/WeatherApp/SearchResultDark.jpg)
+![WeatherApp-SearchResultDark](https://mikegscoder.github.io/img/WeatherApp/SearchResultDark.jpg)
 
 ## :framed_picture: Screenshot - Not Found Light Theme:
 
-![PhotoSite-HomePage](https://mikegscoder.github.io/img/WeatherApp/NotFoundLight.jpg)
+![WeatherApp-NotFoundLight](https://mikegscoder.github.io/img/WeatherApp/NotFoundLight.jpg)
 
 ## :framed_picture: Screenshot - Not Found Dark Theme:
 
-![PhotoSite-HomePage](https://mikegscoder.github.io/img/WeatherApp/NotFoundDark.jpg)
+![WeatherApp-NotFoundDark](https://mikegscoder.github.io/img/WeatherApp/NotFoundDark.jpg)
 
 ## :framed_picture: Screenshot - Loading Spinner Light Theme:
 
-![PhotoSite-HomePage](https://mikegscoder.github.io/img/WeatherApp/LoaderLight.jpg)
+![WeatherApp-LoaderLight](https://mikegscoder.github.io/img/WeatherApp/LoaderLight.jpg)
 
 ## :framed_picture: Screenshot - Loading Spinner Dark Theme:
 
-![PhotoSite-HomePage](https://mikegscoder.github.io/img/WeatherApp/LoaderDark.jpg)
+![WeatherApp-LoaderDark](https://mikegscoder.github.io/img/WeatherApp/LoaderDark.jpg)
 
 ## :framed_picture: Screenshot - Weather Data Export:
 
-![PhotoSite-HomePage](https://mikegscoder.github.io/img/WeatherApp/WeatherDataExport.jpg)
+![WeatherApp-WeatherDataExport](https://mikegscoder.github.io/img/WeatherApp/WeatherDataExport.jpg)
+
+## :framed_picture: Screenshot - React Error Boundary:
+
+![WeatherApp-ReactErrorBoundary](https://mikegscoder.github.io/img/WeatherApp/ErrorBoundary.jpg)
 
 ## 📖 License:
 
