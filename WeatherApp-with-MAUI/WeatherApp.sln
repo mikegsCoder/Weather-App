@@ -5,6 +5,8 @@ VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApp.MAUI", "WeatherApp.MAUI\WeatherApp.MAUI.csproj", "{50A311C6-CF54-4770-B241-351DD28534FB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApp.Core", "WeatherApp.Core\WeatherApp.Core.csproj", "{FCFE2A2B-967A-4539-ABBC-99A0455DEED3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{50A311C6-CF54-4770-B241-351DD28534FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50A311C6-CF54-4770-B241-351DD28534FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50A311C6-CF54-4770-B241-351DD28534FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCFE2A2B-967A-4539-ABBC-99A0455DEED3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCFE2A2B-967A-4539-ABBC-99A0455DEED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCFE2A2B-967A-4539-ABBC-99A0455DEED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCFE2A2B-967A-4539-ABBC-99A0455DEED3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
