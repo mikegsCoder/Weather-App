@@ -8,6 +8,7 @@ namespace WeatherApp.MAUI
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
+            builder.Services.AddApplicationServices();
 
             builder
                 .UseMauiApp<App>()
