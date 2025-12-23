@@ -13,7 +13,16 @@
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new MainPage());
+            var window = new Window(page);
+
+            const int newWidth = 1100;
+            const int newHeight = 580;
+
+            // Fixing window size:
+            window.Width = window.MinimumWidth = window.MaximumWidth = newWidth;
+            window.Height = window.MinimumHeight = window.MaximumHeight = newHeight;
+
+            return window;
         }
     }
 }
