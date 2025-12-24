@@ -5,13 +5,18 @@ using Microsoft.Maui.Controls;
 using System.Diagnostics;
 using System.Reflection;
 using System.Threading;
+using WeatherApp.MAUI.DataContexts;
 
 namespace WeatherApp.MAUI
 {
     public partial class MainPage : ContentPage
     {
+        private MainPageContext context;
+
         public MainPage(IServiceProvider services)
         {
+            context = services.GetService<MainPageContext>()!;
+
             InitializeComponent();
         }
     }
