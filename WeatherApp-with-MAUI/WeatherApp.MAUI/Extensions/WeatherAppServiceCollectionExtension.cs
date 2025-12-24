@@ -3,6 +3,7 @@ using System.Configuration;
 using WeatherApp.MAUI;
 using CommunityToolkit.Maui.Storage;
 using WeatherApp.MAUI.DataContexts;
+using WeatherApp.MAUI.Controllers;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -10,6 +11,7 @@ namespace Microsoft.Extensions.DependencyInjection
     {
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
+            services.AddScoped<WeatherController>();
             services.AddScoped<MainPageContext>();
             services.AddTransient<MainPage>();
             services.AddTransient<App>();
