@@ -24,5 +24,14 @@ namespace WeatherApp.MAUI
 
             BindingContext = context;
         }
+
+        private void PointerEntered(object sender, EventArgs e)
+        { }
+
+        private void PointerExited(object sender, EventArgs e)
+        { }
+
+        private void MAUI_ClickHandler(object sender, EventArgs e)
+        { }
     }
 }

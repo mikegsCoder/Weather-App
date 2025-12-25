@@ -11,9 +11,45 @@
             <RowDefinition Height="40" />
         </Grid.RowDefinitions>
 
-        <Label Grid.Row="0" HorizontalOptions="Center">
-            WeatherApp with MAUI
-        </Label>
+        <!--Header-->
+        <StackLayout  Grid.Row="0">
+            <Grid x:Name="Header">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="400" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="200" />
+                </Grid.ColumnDefinitions>
+
+                <!--MAUI Link-->
+                <HorizontalStackLayout Grid.Column="0" HorizontalOptions="Start">
+                    <Border
+                        HeightRequest="38" 
+                        WidthRequest="120" 
+                        Margin="30, 0, 0, 0"
+                        Padding="0"
+                        Stroke="Transparent"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 20">
+                        <Image
+                            x:Name="Logo"
+                            Margin="0"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            IsAnimationPlaying="True" 
+                            Source="logo.gif"/>
+                    </Border>
+                    <Label Margin="5,5,30,0">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="MAUI_ClickHandler"/>
+                            <PointerGestureRecognizer PointerEntered="PointerEntered"/>
+                            <PointerGestureRecognizer PointerExited="PointerExited"/>
+                        </Label.GestureRecognizers>
+                        Weather App with MAUI
+                    </Label>
+                </HorizontalStackLayout>
+            </Grid>
+
+        </StackLayout>
     </Grid>
 
 </ContentPage>
