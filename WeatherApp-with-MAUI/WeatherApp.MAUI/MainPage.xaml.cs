@@ -33,5 +33,8 @@ namespace WeatherApp.MAUI
 
         private void MAUI_ClickHandler(object sender, EventArgs e)
         { }
+
+        private void ToggleTheme_ClickHandler(object sender, ToggledEventArgs e)
+        { }
     }
 }

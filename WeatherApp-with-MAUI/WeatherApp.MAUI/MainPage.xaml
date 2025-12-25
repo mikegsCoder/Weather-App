@@ -47,6 +47,14 @@
                         Weather App with MAUI
                     </Label>
                 </HorizontalStackLayout>
+
+                <!--Toggle Theme-->
+                <Switch
+                    x:Name="ToggleThemeSwitch"
+                    Grid.Column="2" 
+                    HorizontalOptions="End"
+                    Margin="30,-2,30,0"
+                    Toggled="ToggleTheme_ClickHandler"/>
             </Grid>
 
         </StackLayout>
