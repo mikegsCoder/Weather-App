@@ -60,6 +60,14 @@
             <!-- Top Separator-->
             <BoxView HeightRequest="1" Color="Red" VerticalOptions="End"/>
         </StackLayout>
+
+
+        <!--Footer-->
+        <StackLayout  Grid.Row="2">
+
+            <!-- Bottom Separator-->
+            <BoxView HeightRequest="1" Color="Red"/>
+        </StackLayout>
     </Grid>
 
 </ContentPage>
