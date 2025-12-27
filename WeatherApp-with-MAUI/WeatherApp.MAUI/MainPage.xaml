@@ -89,6 +89,18 @@
                     Data Provider
                 </Label>
 
+                <!--Source Code Link-->
+                <Label 
+                    Grid.Column="2"
+                    HorizontalOptions="End" 
+                    Margin="30,8,30,0">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="SourceCode_ClickHandler"/>
+                        <PointerGestureRecognizer PointerEntered="PointerEntered"/>
+                        <PointerGestureRecognizer PointerExited="PointerExited"/>
+                    </Label.GestureRecognizers>
+                    Source Code
+                </Label>
             </Grid>
         </StackLayout>
     </Grid>
