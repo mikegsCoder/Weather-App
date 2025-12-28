@@ -33,7 +33,11 @@ namespace WeatherApp.MAUI
         }
 
         private void PointerExited(object sender, EventArgs e)
-        { }
+        {
+            var label = sender as Label;
+            label!.TextDecorations = TextDecorations.None;
+            label.FontAttributes = FontAttributes.None;
+        }
 
         private void MAUI_ClickHandler(object sender, EventArgs e)
         { }
