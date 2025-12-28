@@ -26,7 +26,11 @@ namespace WeatherApp.MAUI
         }
 
         private void PointerEntered(object sender, EventArgs e)
-        { }
+        {
+            var label = sender as Label;
+            label!.TextDecorations = TextDecorations.Underline;
+            label.FontAttributes = FontAttributes.Bold;
+        }
 
         private void PointerExited(object sender, EventArgs e)
         { }
