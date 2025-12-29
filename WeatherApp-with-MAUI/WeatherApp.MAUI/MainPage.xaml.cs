@@ -5,6 +5,7 @@ using Microsoft.Maui.Controls;
 using System.Diagnostics;
 using System.Reflection;
 using System.Threading;
+using WeatherApp.Core.Constants;
 using WeatherApp.MAUI.Controllers;
 using WeatherApp.MAUI.DataContexts;
 
@@ -39,8 +40,8 @@ namespace WeatherApp.MAUI
             label.FontAttributes = FontAttributes.None;
         }
 
-        private void MAUI_ClickHandler(object sender, EventArgs e)
-        { }
+        private async void MAUI_ClickHandler(object sender, EventArgs e)
+            => await Launcher.OpenAsync(UrlConstants.MauiUrl);
 
         private void DataProvider_ClickHandler(object sender, EventArgs e)
         { }
