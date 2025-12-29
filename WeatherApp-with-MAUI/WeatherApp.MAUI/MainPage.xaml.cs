@@ -43,8 +43,8 @@ namespace WeatherApp.MAUI
         private async void MAUI_ClickHandler(object sender, EventArgs e)
             => await Launcher.OpenAsync(UrlConstants.MauiUrl);
 
-        private void DataProvider_ClickHandler(object sender, EventArgs e)
-        { }
+        private async void DataProvider_ClickHandler(object sender, EventArgs e)
+            => await Launcher.OpenAsync(UrlConstants.DataProviderUrl);
 
         private void SourceCode_ClickHandler(object sender, EventArgs e)
         { }
