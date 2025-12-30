@@ -17,6 +17,18 @@ namespace WeatherApp.MAUI.DataContexts
         private Color whiteColor = Colors.White;
         private Color blackColor = Colors.Black;
 
+        public bool ThemeIsLight
+        {
+            get { return themeIsLight; }
+            set
+            {
+                themeIsLight = value;
+                NotifyPropertyChanged("ThemeIsLight");
+                NotifyPropertyChanged("TextColor");
+                NotifyPropertyChanged("BackgroundColor");
+            }
+        }
+
         public Color BackgroundColor => themeIsLight ? whiteColor : blackColor;
 
         public Color TextColor => themeIsLight ? blackColor : whiteColor;
