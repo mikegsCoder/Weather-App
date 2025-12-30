@@ -14,6 +14,12 @@ namespace WeatherApp.MAUI.DataContexts
         private bool notFound = false;
         private bool loading = false;
         private bool themeIsLight = true;
+        private Color whiteColor = Colors.White;
+        private Color blackColor = Colors.Black;
+
+        public Color BackgroundColor => themeIsLight ? whiteColor : blackColor;
+
+        public Color TextColor => themeIsLight ? blackColor : whiteColor;
 
         public void NotifyPropertyChanged(string info)
         {
