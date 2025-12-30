@@ -53,6 +53,10 @@ namespace WeatherApp.MAUI
         { }
 
         private void ToggleTheme_ClickHandler(object sender, ToggledEventArgs e)
-        { }
+        {
+            context.ThemeIsLight = !context.ThemeIsLight;
+
+            Application.Current!.UserAppTheme = context.ThemeIsLight ? AppTheme.Light : AppTheme.Dark;
+        }
     }
 }
