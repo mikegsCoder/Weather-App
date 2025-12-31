@@ -29,6 +29,12 @@ namespace WeatherApp.MAUI.DataContexts
             }
         }
 
+        public string City
+        {
+            get { return city; }
+            set { city = value; NotifyPropertyChanged("City"); }
+        }
+
         public Color BackgroundColor => themeIsLight ? whiteColor : blackColor;
 
         public Color TextColor => themeIsLight ? blackColor : whiteColor;
