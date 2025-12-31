@@ -47,6 +47,12 @@ namespace WeatherApp.MAUI.DataContexts
             set { notFound = value; NotifyPropertyChanged("NotFound"); }
         }
 
+        public bool Loading
+        {
+            get { return loading; }
+            set { loading = value; NotifyPropertyChanged("Loading"); }
+        }
+
         public Color BackgroundColor => themeIsLight ? whiteColor : blackColor;
 
         public Color TextColor => themeIsLight ? blackColor : whiteColor;
