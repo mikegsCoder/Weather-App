@@ -52,6 +52,9 @@ namespace WeatherApp.MAUI
         private void FileFormatPicker_SelectionHandler(object sender, EventArgs e)
         { }
 
+        private void CityInput_ChangeHandler(object sender, EventArgs e)
+        { }
+
         private void ToggleTheme_ClickHandler(object sender, ToggledEventArgs e)
         {
             context.ThemeIsLight = !context.ThemeIsLight;
