@@ -81,6 +81,20 @@
                    TextColor="Black"
                    TextChanged="CityInput_ChangeHandler"/>
 
+                <!--Search Button-->
+                <Button 
+                    x:Name="SearchBtn"
+                    Text="Search" 
+                    Margin="0, 15, 0, 0"
+                    HeightRequest="30"
+                    WidthRequest="255"
+                    BorderWidth="2"
+                    CornerRadius="20"
+                    TextColor="{Binding TextColor}"
+                    BorderColor="{Binding TextColor}"
+                    Background="{Binding BackgroundColor}"
+                    Clicked="SearchBtn_ClickHandler" />
+
             </StackLayout>
              
         </Grid>
