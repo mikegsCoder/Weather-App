@@ -11,6 +11,7 @@ namespace Microsoft.Extensions.DependencyInjection
     {
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
+            services.AddScoped<HttpClient>();
             services.AddScoped<WeatherController>();
             services.AddScoped<MainPageContext>();
             services.AddTransient<MainPage>();
