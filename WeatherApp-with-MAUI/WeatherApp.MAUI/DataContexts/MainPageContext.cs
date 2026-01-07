@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WeatherApp.Core.Models.DTO;
 
 namespace WeatherApp.MAUI.DataContexts
 {
@@ -14,8 +15,15 @@ namespace WeatherApp.MAUI.DataContexts
         private bool notFound = false;
         private bool loading = false;
         private bool themeIsLight = true;
+        private WeatherInfoModel? weatherData;
         private Color whiteColor = Colors.White;
         private Color blackColor = Colors.Black;
+
+        public WeatherInfoModel WeatherData
+        {
+            get { return weatherData; }
+            set { weatherData = value; }
+        }
 
         public bool ThemeIsLight
         {
