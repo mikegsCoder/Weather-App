@@ -18,6 +18,7 @@ namespace WeatherApp.MAUI.DataContexts
         private bool themeIsLight = true;
         private WeatherInfoModel? weatherData;
         private GeneralInfoViewModel? generalInfo = null;
+        private List<InfoCardViewModel>? infoCards = null;
         private Color whiteColor = Colors.White;
         private Color blackColor = Colors.Black;
 
@@ -39,6 +40,12 @@ namespace WeatherApp.MAUI.DataContexts
         }
 
         public string Icon => "w" + generalInfo?.Icon.Substring(0, 3) + ".png";
+
+        public List<InfoCardViewModel> InfoCards
+        {
+            get { return infoCards; }
+            set { infoCards = value; NotifyPropertyChanged("InfoCards"); }
+        }
 
         public bool ThemeIsLight
         {
