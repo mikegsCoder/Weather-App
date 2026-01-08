@@ -53,7 +53,7 @@ namespace WeatherApp.MAUI
         { }
 
         private void CityInput_ChangeHandler(object sender, EventArgs e)
-        { }
+            => context.HasCity = context.NotFound = false;
 
         private void SearchBtn_ClickHandler(object sender, EventArgs e)
         { }
