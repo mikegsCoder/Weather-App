@@ -21,5 +21,9 @@ namespace WeatherApp.MAUI.Controllers
             context = services.GetService<MainPageContext>()!;
         }
 
+        public void GetWeatherInfo(string cityName)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -56,7 +56,16 @@ namespace WeatherApp.MAUI
             => context.HasCity = context.NotFound = false;
 
         private void SearchBtn_ClickHandler(object sender, EventArgs e)
-        { }
+        {
+            if (CityInput.Text == null || string.IsNullOrEmpty(CityInput.Text.Trim())) return;
+
+            string cityName = CityInput.Text.Trim();
+
+            string capitalized = string.Concat(cityName[0].ToString().ToUpper(), cityName.AsSpan(1));
+            CityInput.Text = capitalized;
+
+            weatherController.GetWeatherInfo(cityName);
+        }
 
         private void ToggleTheme_ClickHandler(object sender, ToggledEventArgs e)
         {
