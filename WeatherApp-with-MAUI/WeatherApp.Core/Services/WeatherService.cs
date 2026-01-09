@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -25,7 +26,12 @@ namespace WeatherApp.Core.Services
 
         public async Task<WeatherInfoModel> GetWeatherInfoAsync(string cityName)
         {
-            throw new NotImplementedException();
+            string url = ApiConstants.BaseUrl + "weather?q=" + cityName + "&appid=" + ApiConstants.ApiKey;
+
+            string json = await client.GetStringAsync(url);
+            WeatherInfoModel weatherInfo = JsonConvert.DeserializeObject<WeatherInfoModel>(json)!;
+
+            return weatherInfo;
         }
     }
 }
