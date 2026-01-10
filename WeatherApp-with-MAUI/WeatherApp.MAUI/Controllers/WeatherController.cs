@@ -53,7 +53,51 @@ namespace WeatherApp.MAUI.Controllers
 
         private List<InfoCardViewModel> CreateInfoCards(WeatherInfoModel weatherInfo)
         {
-            throw new NotImplementedException();
+            var pressure = new InfoCardViewModel
+            {
+                Icon = "meter.png",
+                Content = "Pressure: " + weatherInfo.Main.Pressure + "hPa"
+            };
+
+            var humidity = new InfoCardViewModel
+            {
+                Icon = "droplet.png",
+                Content = "Humidity: " + weatherInfo.Main.Humidity + "%"
+            };
+
+            var visibility = new InfoCardViewModel
+            {
+                Icon = "eye.png",
+                Content = "Visibility: " + weatherInfo.Visibility / 1000 + "km"
+            };
+
+            var windSpeed = new InfoCardViewModel
+            {
+                Icon = "wind.png",
+                Content = "Wind Speed: " + weatherInfo.Wind.Speed + "km/h"
+            };
+
+            var windDirection = new InfoCardViewModel
+            {
+                Icon = "compass.png",
+                Content = "Wind Direction: " + weatherInfo.Wind.Deg + "deg"
+            };
+
+            var cloudiness = new InfoCardViewModel
+            {
+                Icon = "cloud.png",
+                Content = "Cloudiness: " + weatherInfo.Clouds.All + "%"
+            };
+
+            return new List<InfoCardViewModel>
+            {
+                pressure,
+                humidity,
+                visibility,
+                windSpeed,
+                windDirection,
+                cloudiness
+            };
         }
 
         private GeneralInfoViewModel CreateGeneralInfo(WeatherInfoModel weatherInfo)
