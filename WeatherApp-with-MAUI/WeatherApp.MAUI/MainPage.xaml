@@ -96,7 +96,16 @@
                     Clicked="SearchBtn_ClickHandler" />
 
             </StackLayout>
-             
+
+            <!--LoadingSpinner-->
+            <ActivityIndicator
+                x:Name="LoadingSpinner"
+                Grid.Row="1"
+                HeightRequest="150"
+                WidthRequest="150"
+                Color="CornflowerBlue"
+                IsRunning="{Binding Loading}" />
+
         </Grid>
 
         <!--Footer-->
