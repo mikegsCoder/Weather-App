@@ -94,9 +94,56 @@
                     BorderColor="{Binding TextColor}"
                     Background="{Binding BackgroundColor}"
                     Clicked="SearchBtn_ClickHandler" />
-
             </StackLayout>
 
+            <!--NotFound-->
+            <Border
+               Grid.Row="1"
+               WidthRequest="950"
+               HeightRequest="150"
+               StrokeThickness="2"
+               Stroke="Red"
+               StrokeShape="RoundRectangle 10"
+               IsVisible="{Binding NotFound}">
+                <Grid Height="500">
+                    <Grid.Resources>
+                        <Style TargetType="Label">
+                            <Setter Property="Grid.Column" Value="1"/>
+                            <Setter Property="FontSize" Value="30"/>
+                            <Setter Property="TextColor" Value="red"/>
+                        </Style>
+                    </Grid.Resources>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="310"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image 
+                       Grid.Column="0"
+                       WidthRequest="100"
+                       HeightRequest="100"
+                       Source="cancel.png"/>
+
+                    <VerticalStackLayout Grid.Column="1">
+                        <HorizontalStackLayout>
+                            <Label Margin="0, 20">
+                                Invalid city name provided:
+                            </Label>
+
+                            <Label
+                               Margin="20, 20"
+                               FontAttributes="Bold"
+                               Text="{Binding City}"/>
+                        </HorizontalStackLayout>
+
+                        <Label Margin="10">
+                            Please enter a valid city name!
+                        </Label>
+                    </VerticalStackLayout>
+                </Grid>
+            </Border>
+            
             <!--LoadingSpinner-->
             <ActivityIndicator
                 x:Name="LoadingSpinner"
