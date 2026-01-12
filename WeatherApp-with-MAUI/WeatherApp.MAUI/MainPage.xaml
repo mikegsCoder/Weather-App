@@ -130,6 +130,14 @@
                         Margin="0, -90, 36, 0"
                         Source="{Binding Icon}"/>
 
+                    <!--CityNameAndCountry-->
+                    <Label 
+                        Grid.Column="1" 
+                        HorizontalOptions="Start" 
+                        Margin="-20, 25, 0, 0" 
+                        FontSize="30" 
+                        Text="{Binding GeneralInfo.NameAndCountry}" />
+
                 </Grid>
 
             </Grid>
