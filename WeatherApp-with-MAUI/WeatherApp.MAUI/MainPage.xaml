@@ -96,6 +96,44 @@
                     Clicked="SearchBtn_ClickHandler" />
             </StackLayout>
 
+            <!--Weather Info-->
+            <Grid 
+                Grid.Row="1"
+                IsVisible="{Binding HasCity}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="180" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <!--General Info-->
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <!--WeatherIconBackground-->
+                    <Ellipse 
+                        Grid.Column="0"
+                        HorizontalOptions="End"
+                        Margin="0, -90, 40, 0"
+                        HeightRequest="70"
+                        WidthRequest="70"
+                        Fill="Gray" />
+
+                    <!--WeatherIcon-->
+                    <Image 
+                        Grid.Column="0"
+                        HeightRequest="80" 
+                        WidthRequest="77" 
+                        HorizontalOptions="End" 
+                        Margin="0, -90, 36, 0"
+                        Source="{Binding Icon}"/>
+
+                </Grid>
+
+            </Grid>
+
             <!--NotFound-->
             <Border
                Grid.Row="1"
