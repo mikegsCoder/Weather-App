@@ -203,7 +203,7 @@
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
 
-                    <!--InfoCardPressusre-->
+                    <!--InfoCard Pressusre-->
                     <Border Grid.Row="0" Grid.Column="0">
                         <FlexLayout>
                             <Image 
@@ -216,6 +216,14 @@
                         </FlexLayout>
                     </Border>
 
+                    <!--InfoCard Humidity-->
+                    <Border Grid.Row="0" Grid.Column="1">
+                        <FlexLayout>
+                            <Image Source="{Binding InfoCards[1].Icon}"/>
+                            <Label Text="{Binding InfoCards[1].Content}" />
+                        </FlexLayout>
+                    </Border>
+                    
                 </Grid>
             </Grid>
 
