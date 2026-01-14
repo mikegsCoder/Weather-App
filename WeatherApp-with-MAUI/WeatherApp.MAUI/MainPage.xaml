@@ -161,7 +161,62 @@
                     HorizontalOptions="Center" 
                     Margin="0, 155, 0, 0"
                     Text="{Binding GeneralInfo.FeelsLike}" />
-                
+
+                <!--InfoCards-->
+                <Grid x:Name="InfoCards" Grid.Row="1">
+                    <Grid.Resources>
+                        <!--Image styles-->
+                        <Style TargetType="Image">
+                            <Setter Property="WidthRequest" Value="30"/>
+                            <Setter Property="HeightRequest" Value="30"/>
+                            <Setter Property="HorizontalOptions" Value="Center"/>
+                            <Setter Property="Margin" Value="0, -3, 5, 0"/>
+                        </Style>
+
+                        <Style TargetType="FlexLayout">
+                            <Setter Property="HorizontalOptions" Value="Center"/>
+                            <Setter Property="Margin" Value="0, 9, 0, 0"/>
+                        </Style>
+
+                        <Style TargetType="Border">
+                            <Setter Property="HeightRequest" Value="40" />
+                            <Setter Property="WidthRequest" Value="330" />
+                            <Setter Property="StrokeShape" Value="RoundRectangle 5" />
+                            <Setter Property="StrokeThickness" Value="1" />
+                            <Setter Property="Stroke" Value="{Binding TextColor}" />
+                        </Style>
+
+                        <Style TargetType="Label">
+                            <Setter Property="Margin" Value="0"/>
+                            <Setter Property="TextColor" Value="{Binding TextColor}"/>
+                        </Style>
+                    </Grid.Resources>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60" />
+                        <RowDefinition Height="60" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <!--InfoCardPressusre-->
+                    <Border Grid.Row="0" Grid.Column="0">
+                        <FlexLayout>
+                            <Image 
+                                HeightRequest="33"
+                                WidthRequest="33"
+                                Margin="0, -4, 7, 0"
+                                Source="{Binding InfoCards[0].Icon}"/>
+
+                            <Label Text="{Binding InfoCards[0].Content}" />
+                        </FlexLayout>
+                    </Border>
+
+                </Grid>
             </Grid>
 
             <!--NotFound-->
