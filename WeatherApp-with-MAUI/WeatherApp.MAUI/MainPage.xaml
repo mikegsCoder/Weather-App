@@ -223,6 +223,14 @@
                             <Label Text="{Binding InfoCards[1].Content}" />
                         </FlexLayout>
                     </Border>
+
+                    <!--InfoCard Visibility-->
+                    <Border Grid.Row="0" Grid.Column="2">
+                        <FlexLayout>
+                            <Image Source="{Binding InfoCards[2].Icon}"/>
+                            <Label Text="{Binding InfoCards[2].Content}" />
+                        </FlexLayout>
+                    </Border>
                     
                 </Grid>
             </Grid>
