@@ -231,6 +231,14 @@
                             <Label Text="{Binding InfoCards[2].Content}" />
                         </FlexLayout>
                     </Border>
+
+                    <!--InfoCard WindSpeed-->
+                    <Border Grid.Row="1" Grid.Column="0">
+                        <FlexLayout>
+                            <Image Source="{Binding InfoCards[3].Icon}"/>
+                            <Label Text="{Binding InfoCards[3].Content}" />
+                        </FlexLayout>
+                    </Border>
                     
                 </Grid>
             </Grid>
