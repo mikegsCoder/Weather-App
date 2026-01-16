@@ -247,7 +247,14 @@
                             <Label Text="{Binding InfoCards[4].Content}" />
                         </FlexLayout>
                     </Border>
-                    
+
+                    <!--InfoCard Cloudiness-->
+                    <Border Grid.Row="1" Grid.Column="2">
+                        <FlexLayout>
+                            <Image Source="{Binding InfoCards[5].Icon}"/>
+                            <Label Text="{Binding InfoCards[5].Content}" />
+                        </FlexLayout>
+                    </Border>
                 </Grid>
             </Grid>
 
