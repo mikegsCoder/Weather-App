@@ -113,5 +113,10 @@ namespace WeatherApp.MAUI.Controllers
 
             return generalInfo;
         }
+
+        public async Task<Tuple<bool, string>> ExportWeatherData(string fileFormat)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

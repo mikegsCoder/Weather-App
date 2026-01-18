@@ -49,8 +49,26 @@ namespace WeatherApp.MAUI
         private async void SourceCode_ClickHandler(object sender, EventArgs e)
             => await Launcher.OpenAsync(UrlConstants.SourceCodeUrl);
 
-        private void FileFormatPicker_SelectionHandler(object sender, EventArgs e)
-        { }
+        private async void FileFormatPicker_SelectionHandler(object sender, EventArgs e)
+        {
+            if (FileFormatPicker.SelectedItem == null) return;
+
+            string? fileFormat = FileFormatPicker.SelectedItem?.ToString()!.ToLower();
+            FileFormatPicker.SelectedItem = null;
+
+            if (fileFormat == null) return;
+
+            var result = await weatherController.ExportWeatherData(fileFormat);
+
+            if (result.Item1)
+            {
+                await DisplayAlert("Success", String.Format(MessageConstants.DataExportSuccess, result.Item2, fileFormat), "ОK");
+            }
+            else
+            {
+                await DisplayAlert("Error", result.Item2, "ОK");
+            }
+        }
 
         private void CityInput_ChangeHandler(object sender, EventArgs e)
             => context.HasCity = context.NotFound = false;
