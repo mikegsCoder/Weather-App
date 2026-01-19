@@ -20,9 +20,24 @@ namespace WeatherApp.Core.Services
             await File.WriteAllTextAsync(path + "/WeatherData." + format, result);
         }
 
-        private string? SerializeData(WeatherInfoModel weatherData, string format)
+        private string SerializeData(WeatherInfoModel weatherData, string format)
         {
-            throw new NotImplementedException();
+            string result;
+
+            if (format == "json")
+            {
+                result = JsonConvert.SerializeObject(weatherData, Newtonsoft.Json.Formatting.Indented);
+            }
+            else
+            {
+                var sb = new StringBuilder();
+
+                var serializer = new XmlSerializer(typeof(WeatherInfoModel), new XmlRootAttribute("WeatherData"));
+                serializer.Serialize(new StringWriter(sb), weatherData, new XmlSerializerNamespaces(new[] { XmlQualifiedName.Empty }));
+                result = sb.ToString();
+            }
+
+            return result;
         }
     }
 }
