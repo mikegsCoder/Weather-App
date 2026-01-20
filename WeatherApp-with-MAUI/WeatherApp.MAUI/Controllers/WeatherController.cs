@@ -6,6 +6,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WeatherApp.Core.Constants;
 using WeatherApp.Core.Contracts;
 using WeatherApp.Core.Models.DTO;
 using WeatherApp.Core.Models.ViewModels;
@@ -119,9 +120,29 @@ namespace WeatherApp.MAUI.Controllers
             return generalInfo;
         }
 
-        public async Task<Tuple<bool, string>> ExportWeatherData(string fileFormat)
+        public async Task<Tuple<bool, string>> ExportWeatherData(string format)
         {
-            throw new NotImplementedException();
+            var pickerResult = await folderPicker.PickAsync();
+
+            try
+            {
+                pickerResult.EnsureSuccess();
+            }
+            catch (Exception ex)
+            {
+                return new Tuple<bool, string>(false, MessageConstants.FolderSelectionError);
+            }
+
+            try
+            {
+                fileService.ExportWeatherDataAsync(context.WeatherData, pickerResult.Folder.Path, format);
+
+                return new Tuple<bool, string>(true, pickerResult.Folder.Path);
+            }
+            catch (Exception ex)
+            {
+                return new Tuple<bool, string>(false, MessageConstants.DataExportError);
+            }
         }
     }
 }
