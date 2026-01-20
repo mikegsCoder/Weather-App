@@ -1,14 +1,15 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using CommunityToolkit.Maui.Storage;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WeatherApp.MAUI.DataContexts;
-using System.Globalization;
 using WeatherApp.Core.Contracts;
-using WeatherApp.Core.Models.ViewModels;
 using WeatherApp.Core.Models.DTO;
+using WeatherApp.Core.Models.ViewModels;
+using WeatherApp.MAUI.DataContexts;
 
 namespace WeatherApp.MAUI.Controllers
 {
@@ -16,11 +17,15 @@ namespace WeatherApp.MAUI.Controllers
     {
         private readonly MainPageContext context;
         private readonly IWeatherService weatherService;
+        private readonly IFileService fileService;
+        private readonly IFolderPicker folderPicker;
 
         public WeatherController(IServiceProvider services)
         {
             weatherService = services.GetService<IWeatherService>()!;
+            fileService = services.GetService<IFileService>()!;
             context = services.GetService<MainPageContext>()!;
+            folderPicker = services.GetService<IFolderPicker>()!;
         }
 
         public async void GetWeatherInfo(string cityName)
