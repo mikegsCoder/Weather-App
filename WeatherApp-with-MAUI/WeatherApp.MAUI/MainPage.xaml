@@ -74,6 +74,21 @@
                         Margin="3,-2,0,0"
                         Toggled="ToggleTheme_ClickHandler"/>
 
+                    <!--Moon Icon Background-->
+                    <Ellipse 
+                        HorizontalOptions="Start"
+                        Margin="-55, 5.1, 0, 0"
+                        HeightRequest="20"
+                        WidthRequest="20"
+                        Fill="Gray" />
+
+                    <!--Moon Icon-->
+                    <Image 
+                        HeightRequest="13"
+                        WidthRequest="13"
+                        Margin="-8.2, 7.5, 0, 0"
+                        Source="moon.png"/>
+
                 </FlexLayout>
             </Grid>
 
