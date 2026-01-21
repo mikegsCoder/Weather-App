@@ -49,12 +49,32 @@
                 </HorizontalStackLayout>
 
                 <!--Toggle Theme-->
-                <Switch
-                    x:Name="ToggleThemeSwitch"
+                <FlexLayout 
                     Grid.Column="2" 
-                    HorizontalOptions="End"
-                    Margin="30,-2,30,0"
-                    Toggled="ToggleTheme_ClickHandler"/>
+                    HorizontalOptions="End">
+
+                    <!--Sun Icon Background-->
+                    <Ellipse 
+                       HorizontalOptions="Start"
+                       Margin="0, 5.1, 0, 0"
+                       HeightRequest="20"
+                       WidthRequest="20"
+                       Fill="Gray" />
+
+                    <!--Sun Icon-->
+                    <Image 
+                       HeightRequest="13"
+                       WidthRequest="13"
+                       Margin="-8.2, 7.5, 0, 0"
+                       Source="sun.png"/>
+
+                    <!--ToggleTheme Switch-->
+                    <Switch
+                        x:Name="ToggleThemeSwitch"
+                        Margin="3,-2,0,0"
+                        Toggled="ToggleTheme_ClickHandler"/>
+
+                </FlexLayout>
             </Grid>
 
             <!--Top Separator-->
