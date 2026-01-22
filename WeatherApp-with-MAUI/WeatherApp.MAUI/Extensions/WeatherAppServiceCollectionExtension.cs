@@ -1,6 +1,4 @@
 ﻿using CommunityToolkit.Maui.Storage;
-using System.Configuration;
-using System.Net.Http;
 using WeatherApp.Core.Contracts;
 using WeatherApp.Core.Services;
 using WeatherApp.MAUI;
