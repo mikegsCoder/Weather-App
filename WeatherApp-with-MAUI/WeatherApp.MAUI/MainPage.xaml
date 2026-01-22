@@ -48,12 +48,11 @@
                     </Label>
                 </HorizontalStackLayout>
 
-                <!--Toggle Theme-->
-                <FlexLayout 
+                <!--Toggle Theme Styling 1-->
+                <!--<FlexLayout 
                     Grid.Column="2" 
                     HorizontalOptions="End">
 
-                    <!--Sun Icon Background-->
                     <Ellipse 
                        HorizontalOptions="Start"
                        Margin="0, 5.1, 0, 0"
@@ -61,20 +60,17 @@
                        WidthRequest="20"
                        Fill="Gray" />
 
-                    <!--Sun Icon-->
                     <Image 
                        HeightRequest="13"
                        WidthRequest="13"
                        Margin="-8.2, 7.5, 0, 0"
                        Source="sun.png"/>
 
-                    <!--ToggleTheme Switch-->
                     <Switch
                         x:Name="ToggleThemeSwitch"
                         Margin="3,-2,0,0"
                         Toggled="ToggleTheme_ClickHandler"/>
 
-                    <!--Moon Icon Background-->
                     <Ellipse 
                         HorizontalOptions="Start"
                         Margin="-55, 5.1, 0, 0"
@@ -82,14 +78,49 @@
                         WidthRequest="20"
                         Fill="Gray" />
 
-                    <!--Moon Icon-->
                     <Image 
                         HeightRequest="13"
                         WidthRequest="13"
                         Margin="-8.2, 7.5, 0, 0"
                         Source="moon.png"/>
+                </FlexLayout>-->
 
-                </FlexLayout>
+                <!--Toggle Theme Styling 2-->
+                <Border
+                    Grid.Column="2" 
+                    StrokeShape="RoundRectangle 15"
+                    HeightRequest="30"
+                    WidthRequest="85"
+                    BackgroundColor="#008CBA"
+                    Margin="-80, 0, 0, 0"
+                    StrokeThickness ="1"
+                    Stroke="Red">
+
+                    <FlexLayout>
+
+                        <!--Sun Icon-->
+                        <Image 
+                            HeightRequest="13"
+                            WidthRequest="13"
+                            Margin="5, 5, 0, 0"
+                            Source="sun.png"/>
+
+                        <!--ToggleTheme Switch-->
+                        <Switch
+                             x:Name="ToggleThemeSwitch"
+                             Margin="4,-4,0,0"
+                             Toggled="ToggleTheme_ClickHandler"/>
+
+                        <!--Moon Icon-->
+                        <Image 
+                             HeightRequest="13"
+                             WidthRequest="13"
+                             Margin="-10, 5, 0, 0"
+                             Source="moon.png"/>
+
+                    </FlexLayout>
+                </Border>
+
             </Grid>
 
             <!--Top Separator-->
