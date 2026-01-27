@@ -1,0 +1,11 @@
+#error {
+  border: 5px solid red !important;
+  color: red;
+  padding: 1rem;
+  width: 50vw;
+  margin: 30vh auto;
+}
+
+#error>div>h3 {
+  margin: 1rem 6rem;
+}
