@@ -1,4 +1,5 @@
 'use server'
+import logo from '../public/logo.gif';
 
 import ErrorBoundary from '@/components/ErrorBoundary';
 
