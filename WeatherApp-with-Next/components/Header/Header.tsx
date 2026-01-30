@@ -12,7 +12,15 @@ const Header = (props: {
 }): ReactElement => {
   return (
     <>
-      <h2>Header</h2>
+      <Link
+        href={props.nextUrl}
+        target={"_blank"}
+        rel="noreferrer"
+        className="text-3xl flex items-center gap-2 absolute top-2 left-10 font-semibold"
+      >
+        <Image src={props.logo} className="w-[120px]" id="logo" alt="logo" />
+        Weather App with NEXT.JS
+      </Link>
       <ToggleTheme/>
     </>
   )
