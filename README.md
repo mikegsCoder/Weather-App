@@ -15,6 +15,7 @@
 - Tailwind CSS and HTML for the Angular, VueJS, React and Lit-HTML projects
 - ASP and C# for the ASP project
 - WPF and C# for the WPF project
+- MAUI and C# for the MAUI project
 
 ## :framed_picture: Screenshot - Main Window Light Theme:
 
