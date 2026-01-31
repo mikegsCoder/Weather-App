@@ -1,6 +1,6 @@
 # Weather-App
 
-:dart:  A simple Weather app built with different technologies. You can enter your city name and the application will provide you with weather data. If such a city does not exist you will be warned that invalid city name is provided. You can switch between Light and Dark theme. In WPF project you have an option to export weather data in JSON or XML format.
+:dart:  A simple Weather app built with different technologies. You can enter your city name and the application will provide you with weather data. If such a city does not exist you will be warned that invalid city name is provided. You can switch between Light and Dark theme. In WPF and MAUI projects you have an option to export weather data in JSON or XML format.
 
 ## 🔗 **Link to the project:**
 
@@ -14,8 +14,8 @@
 - Lit-HTML and JavaScript for the Lit-HTML project
 - Tailwind CSS and HTML for the Angular, VueJS, React and Lit-HTML projects
 - ASP and C# for the ASP project
-- WPF and C# for the WPF project
-- MAUI and C# for the MAUI project
+- WPF, XAML and C# for the WPF project
+- MAUI, XAML and and C# for the MAUI project
 
 ## :framed_picture: Screenshot - Main Window Light Theme:
 
