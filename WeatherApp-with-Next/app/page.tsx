@@ -13,7 +13,7 @@ export default async function Home() {
       <ErrorBoundary>
         <CityContextProvider>
           <Header logo={logo} nextUrl={nextUrl} />
-          <h2>Weather App</h2>
+          
         </CityContextProvider>
       </ErrorBoundary>
     </div>
