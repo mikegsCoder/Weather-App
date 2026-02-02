@@ -21,7 +21,18 @@ const Header = (props: {
         <Image src={props.logo} className="w-[120px]" id="logo" alt="logo" />
         Weather App with NEXT.JS
       </Link>
-      <ToggleTheme/>
+      <div className="icon-button toggle-theme">
+        <ToggleTheme />
+        <label
+          htmlFor="checkbox"
+          className="label top-2 right-10"
+        >
+          <FiMoon color="white" />
+          <FiSun color="yellow" />
+          <div className="ball"></div>
+        </label>
+      </div>
+      <hr className='hr-top' />
     </>
   )
 }
