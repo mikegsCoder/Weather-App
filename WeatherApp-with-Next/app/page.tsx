@@ -4,6 +4,7 @@ import { sourceCodeUrl, dataProviderUrl, nextUrl } from '@/constants/appConstant
 import { CityContextProvider } from '@/contexts/CityContext';
 
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import ErrorBoundary from '@/components/ErrorBoundary';
 
 export default async function Home() {
@@ -14,6 +15,7 @@ export default async function Home() {
         <CityContextProvider>
           <Header logo={logo} nextUrl={nextUrl} />
           
+          <Footer sourceCode={sourceCodeUrl} dataProviderUrl={dataProviderUrl} />
         </CityContextProvider>
       </ErrorBoundary>
     </div>
