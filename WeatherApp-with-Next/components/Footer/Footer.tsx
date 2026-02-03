@@ -18,6 +18,14 @@ const Footer = (props: {
       >
         Data Provider
       </Link>
+      <Link
+        href={props.sourceCode}
+        target={"_blank"}
+        rel="noreferrer"
+        className="text-3xl font-semibold absolute bottom-5 right-10"
+      >
+        Source Code
+      </Link>
     </>
   )
 }
