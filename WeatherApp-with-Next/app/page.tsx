@@ -7,7 +7,11 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ErrorBoundary from '@/components/ErrorBoundary';
 
-export default async function Home() {
+import IResponseData from '@/interfaces/IResponseData';
+
+export default async function Home({ searchParams }: { searchParams: { city?: string }}) {
+  let data: IResponseData;
+  const { city } = await searchParams;
 
   return (
     <div id="root">
