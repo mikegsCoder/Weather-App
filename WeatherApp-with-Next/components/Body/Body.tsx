@@ -4,6 +4,8 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { ReactElement, useEffect, useState, useTransition } from 'react';
 import { useCityContext } from '@/contexts/CityContext';
 
+import CityInput from './Partials/CityInput/';
+
 import IResponseData from '@/interfaces/IResponseData';
 import IBodyData from '@/interfaces/IBodyData';
 
