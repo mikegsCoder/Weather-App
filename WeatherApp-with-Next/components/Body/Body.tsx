@@ -1,10 +1,13 @@
 'use client'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
-import { ReactElement, useState, useTransition } from 'react';
+import { ReactElement, useEffect, useState, useTransition } from 'react';
 import { useCityContext } from '@/contexts/CityContext';
 
 import IResponseData from '@/interfaces/IResponseData';
+import IBodyData from '@/interfaces/IBodyData';
+
+import { createBodyData } from '@/utils/createBodyData';
 
 const Body = (props: {
   data: IResponseData,
@@ -19,6 +22,18 @@ const Body = (props: {
   const [inputChanges, setInputChanges] = useState(false);
   const [notFound, setNotFound] = useState(false);
   const [infoCards, setInfoCards] = useState([] as ReactElement[]);
+
+  useEffect((): void => {
+    if (Object.keys(props.data).length == 0) {
+      setNotFound(true);
+    } else {
+      setNotFound(false);
+    }
+
+    const bodyData: IBodyData[] = createBodyData(props.data);
+   
+    //To implement infoCards
+  }, [props.data]);
 
   return (
     <div className="">
