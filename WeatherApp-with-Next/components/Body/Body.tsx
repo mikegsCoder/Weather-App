@@ -5,6 +5,7 @@ import { ReactElement, useEffect, useState, useTransition } from 'react';
 import { useCityContext } from '@/contexts/CityContext';
 
 import CityInput from './Partials/CityInput/';
+import GeneralInfo from './Partials/GeneralInfo/';
 
 import IResponseData from '@/interfaces/IResponseData';
 import IBodyData from '@/interfaces/IBodyData';
