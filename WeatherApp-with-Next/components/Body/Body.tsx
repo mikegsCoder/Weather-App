@@ -35,8 +35,8 @@ const Body = (props: {
     }
 
     const bodyData: IBodyData[] = createBodyData(props.data);
-   
-    //To implement infoCards
+    const cards: ReactElement[] = bodyData.map(data => <InfoCard data={data} key={bodyData.indexOf(data)}/>);
+    setInfoCards(cards);
   }, [props.data]);
 
   return (
