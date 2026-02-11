@@ -43,6 +43,20 @@ const Body = (props: {
     setInputChanges(true);
   }, [city]);
 
+  const handleSearch = async (): Promise<void> => {
+    if (!city.name) return;
+
+    setNotFound(true);
+    setInputChanges(false);
+
+    const updatedSearchParams = new URLSearchParams(searchParams);
+    updatedSearchParams.set("city", city.name);
+
+    startTransition(() => {
+      router.replace(`${pathname}?${updatedSearchParams.toString()}`);
+    });
+  };
+
   return (
     <div className="">
       <div className="p-5 lg:p-10">
