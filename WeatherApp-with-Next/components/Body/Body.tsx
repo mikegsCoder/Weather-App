@@ -39,6 +39,10 @@ const Body = (props: {
     setInfoCards(cards);
   }, [props.data]);
 
+  useEffect((): void => {
+    setInputChanges(true);
+  }, [city]);
+
   return (
     <div className="">
       <div className="p-5 lg:p-10">
