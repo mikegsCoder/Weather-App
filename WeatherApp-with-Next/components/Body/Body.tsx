@@ -57,6 +57,19 @@ const Body = (props: {
     });
   };
 
+  const weatherInfo: ReactElement = (
+    <>
+      <div className="text-center" role="status">
+        <div className="grid">
+          <GeneralInfo data={props.data} />
+          <div className="grid grid-cols-2 gap-5 md:xl:2xl:grid-cols-3 place-content-center">
+            {infoCards}
+          </div>
+        </div>
+      </div>
+    </>
+  )
+
   return (
     <div className="">
       <div className="p-5 lg:p-10">
