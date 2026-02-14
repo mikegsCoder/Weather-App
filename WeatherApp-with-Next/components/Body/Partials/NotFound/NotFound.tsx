@@ -1,3 +1,5 @@
+import '../NotFound/NotFound.css'
+
 import { ReactElement } from 'react';
 import { useCityContext } from '@/contexts/CityContext';
 import { FaRegCircleXmark } from 'react-icons/fa6';
