@@ -8,6 +8,7 @@ import CityInput from './Partials/CityInput/';
 import GeneralInfo from './Partials/GeneralInfo/';
 import InfoCard from './Partials/InfoCard/';
 import Loader from './Partials/Loader/';
+import NotFound from './Partials/NotFound/';
 
 import IResponseData from '@/interfaces/IResponseData';
 import IBodyData from '@/interfaces/IBodyData';
