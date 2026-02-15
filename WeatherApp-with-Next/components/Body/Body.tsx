@@ -75,7 +75,10 @@ const Body = (props: {
   return (
     <div className="">
       <div className="p-5 lg:p-10">
-        <h2>Weather Data</h2>
+        <CityInput  handleSearch={handleSearch}/>
+        { isPending ? <Loader/> : null }
+        { !isPending && notFound && !inputChanges ? <NotFound/> : null }
+        { !isPending && !notFound && city.name ? weatherInfo : null }
       </div>
     </div>
   )
