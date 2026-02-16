@@ -16,6 +16,7 @@
 - ASP and C# for the ASP project
 - WPF, XAML and C# for the WPF project
 - MAUI, XAML and and C# for the MAUI project
+- NEXT and TypeScript for the NEXT project
 
 ## :framed_picture: Screenshot - Main Window Light Theme:
 
