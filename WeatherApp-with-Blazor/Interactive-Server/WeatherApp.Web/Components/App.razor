@@ -1,0 +1,35 @@
+﻿@inject IConfiguration Configuration
+
+@page "/"
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@Configuration["App:Title"]</title>
+    <link href=@Configuration["App:Urls:IconUrl"] rel="icon" />
+    
+    <!-- CSS -->
+    <link href=@Configuration["App:Urls:StylesUrl"] rel="stylesheet" />
+    <link href=@Configuration["App:Urls:ComponentsStylesUrl"] rel="stylesheet" />
+    <link href=@Configuration["App:Urls:FontAwesomeUrl"] rel="stylesheet" />
+    
+    <base href="/" />
+
+    <HeadOutlet />
+</head>
+
+<body>
+    <Header />
+    <Body />
+    <Footer />
+
+    <!-- JavaScript -->
+    <script src=@Configuration["App:Js:TailwindUrl"]></script>
+    <script src=@Configuration["App:Js:SiteJsUrl"]></script>
+    <script src=@Configuration["App:Js:BlazorJsUrl"]></script>
+</body>
+
+</html>
