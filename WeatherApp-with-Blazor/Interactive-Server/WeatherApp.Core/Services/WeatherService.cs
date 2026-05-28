@@ -30,7 +30,25 @@ namespace WeatherApp.Core.Services
             baseUrl = configuration["App:ApiConstants:BaseUrl"]!;
         }
 
-        public Task<Tuple<GeneralInfoViewModel, List<InfoCardViewModel>>> GetWeatherInfoAsync(string cityName)
+        public async Task<Tuple<GeneralInfoViewModel, List<InfoCardViewModel>>> GetWeatherInfoAsync(string cityName)
+        {
+            var url = baseUrl + "weather?q=" + cityName + "&appid=" + apiKey;
+
+            string json = await client.GetStringAsync(url);
+            WeatherInfoModel weatherInfo = JsonConvert.DeserializeObject<WeatherInfoModel>(json);
+
+            var generalInfo = CreateGeneralInfo(weatherInfo);
+            var infoCards = CreateInfoCards(weatherInfo);
+
+            return new Tuple<GeneralInfoViewModel, List<InfoCardViewModel>>(generalInfo, infoCards);
+        }
+
+        private List<InfoCardViewModel> CreateInfoCards(WeatherInfoModel? weatherInfo)
+        {
+            throw new NotImplementedException();
+        }
+
+        private GeneralInfoViewModel CreateGeneralInfo(WeatherInfoModel? weatherInfo)
         {
             throw new NotImplementedException();
         }
