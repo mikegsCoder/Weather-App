@@ -17,6 +17,19 @@ namespace WeatherApp.Core.Services
 {
     public class WeatherService : IWeatherService
     {
+        private readonly HttpClient client;
+
+        private readonly string apiKey;
+        private readonly string baseUrl;
+
+        public WeatherService(IServiceProvider services, IConfiguration configuration)
+        {
+            client = services.GetRequiredService<HttpClient>();
+
+            apiKey = configuration["App:ApiConstants:ApiKey"]!;
+            baseUrl = configuration["App:ApiConstants:BaseUrl"]!;
+        }
+
         public Task<Tuple<GeneralInfoViewModel, List<InfoCardViewModel>>> GetWeatherInfoAsync(string cityName)
         {
             throw new NotImplementedException();
