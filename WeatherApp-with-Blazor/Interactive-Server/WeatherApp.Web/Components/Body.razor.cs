@@ -11,5 +11,15 @@ using WeatherApp.Core.Services;
 namespace WeatherApp.Web.Components
 {
     public partial class Body
-    {}
+    {
+        [Inject]
+        private IWeatherService weatherService { get; set; } = null!;
+
+        [Inject]
+        private ILogger<Body> logger { get; set; } = null!;
+
+        private bool isLoading = false;
+        private bool notFound = false;
+        private bool hasData = false;
+    }
 }
