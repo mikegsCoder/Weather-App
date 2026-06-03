@@ -21,5 +21,11 @@ namespace WeatherApp.Web.Components
         private bool isLoading = false;
         private bool notFound = false;
         private bool hasData = false;
+
+        GeneralInfoViewModel GeneralInfo = new();
+        List<InfoCardViewModel> InfoCards = new();
+
+        public string? City { get; set; }
+
     }
 }
