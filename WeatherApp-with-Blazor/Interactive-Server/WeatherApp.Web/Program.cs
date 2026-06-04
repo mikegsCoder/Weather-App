@@ -1,6 +1,3 @@
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Hosting;
-using System.Reflection.PortableExecutable;
 using WeatherApp.Web.Components;
 
 var builder = WebApplication.CreateBuilder(args);
