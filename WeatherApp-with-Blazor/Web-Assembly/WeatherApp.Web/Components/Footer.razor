@@ -1,0 +1,14 @@
+﻿@inject IConfiguration Configuration
+
+<hr class='hr-bottom' />
+<a href=@Configuration["App:Footer:DataProviderUrl"]
+   target="_blank" rel="noreferrer"
+   class="text-3xl font-semibold absolute bottom-5 left-10">
+    Data Provider
+</a>
+<a href=@Configuration["App:Footer:SourceCodeUrl"]
+   target="_blank"
+   rel="noreferrer"
+   class="text-3xl font-semibold absolute bottom-5 right-10">
+    Source Code
+</a>
