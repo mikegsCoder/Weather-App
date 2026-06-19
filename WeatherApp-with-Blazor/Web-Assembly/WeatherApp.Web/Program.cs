@@ -5,4 +5,6 @@ using WeatherApp.Web.Components;
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 
+builder.Services.AddApplicationServices();
+
 await builder.Build().RunAsync();
