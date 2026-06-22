@@ -118,4 +118,5 @@ namespace WeatherApp.Core.Services
 
             return generalInfo;
         }
+    }
 }
