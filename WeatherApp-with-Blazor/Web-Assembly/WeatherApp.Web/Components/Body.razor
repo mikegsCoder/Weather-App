@@ -1,0 +1,27 @@
+﻿<div class="p-5 lg:p-10">
+
+    <CityInput OnSubmitCallback="Submit"/>
+
+    @if (isLoading)
+    {
+        <Loader />
+    }
+
+    @if (notFound)
+    {
+        <NotFound CityName=@City />
+    }
+
+    @if (hasData)
+    {
+        <div id="weather-info">
+            <GeneralInfo GeneralInfoModel="GeneralInfo" />
+            <div class="grid grid-cols-2 gap-5 md:xl:2xl:grid-cols-3 place-content-center">
+                @foreach (var card in InfoCards)
+                {
+                    <InfoCard InfoCardModel="card" />
+                }
+            </div>
+        </div>
+    }
+</div>
