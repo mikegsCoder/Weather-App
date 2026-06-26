@@ -51,7 +51,30 @@ namespace WeatherApp.Web.Components
 
         private async Task<Tuple<GeneralInfoViewModel, List<InfoCardViewModel>>> GetWeatherInfo(string cityName)
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrEmpty(cityName)) return null!;
+
+            isLoading = true;
+            hasData = false;
+            notFound = false;
+
+            try
+            {
+                var info = await weatherService.GetWeatherInfoAsync(cityName);
+
+                logger.LogInformation(string.Concat(nameof(WeatherApp), " - ", nameof(GetWeatherInfo), ": ", "Country: ", info.Item1.Country, " City: ", info.Item1.Name, " Temperature: ", info.Item1.Temp));
+
+                return info;
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(string.Concat(nameof(WeatherApp), " - ", nameof(GetWeatherInfo), ": ", ex.Message), ex);
+
+                return null!;
+            }
+            finally
+            {
+                isLoading = false;
+            }
         }
     }
 }
