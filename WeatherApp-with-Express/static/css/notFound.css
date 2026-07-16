@@ -1,0 +1,14 @@
+#not-found {
+  border: 3px solid red !important;
+  color: red;
+  margin-top: 5rem;
+  padding: 1rem;
+}
+
+#not-found>div>h3 {
+  margin: 1rem 6rem;
+}
+
+#err {
+  font-size: 110px;
+}
