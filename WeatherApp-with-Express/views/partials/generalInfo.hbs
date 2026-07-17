@@ -1,0 +1,22 @@
+<div class="flex flex-col items-center justify-center">
+  <h5 class="text-5xl flex items-center gap-5">
+    <img
+      class="object-contain"
+      src="http://openweathermap.org/img/wn/{{icon}}@2x.png"
+      alt="weather-icon"
+    />
+    <span>
+      {{name}},<span> {{country}}</span>
+    </span>
+  </h5>
+  <h2 class="text-3xl capitalize">
+    {{description}}
+  </h2>
+  <h6 class="text-7xl gap-2 mb-5 lg:grid">
+    {{temp}}°C
+    <p class="text-lg text-3xl">
+      Feels Like:
+      {{feels_like}}°C
+    </p>
+  </h6>
+</div>
