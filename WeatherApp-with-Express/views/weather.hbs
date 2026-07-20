@@ -1,0 +1,21 @@
+{{#if loading}}
+  {{>loader}}
+
+  <script>
+    setTimeout(() => {
+      location.reload();
+    }, 1000);
+  </script>
+
+{{else}}
+  <div class="text-center" role="status" id="weather-info">
+    <div class="grid">
+      {{>generalInfo data.generalData}}
+      <div class="grid grid-cols-2 gap-5 md:xl:2xl:grid-cols-3 place-content-center">
+        {{#each data.infoCardsData}}
+          {{>infoCard}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+{{/if}}
