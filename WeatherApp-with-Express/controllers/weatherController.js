@@ -22,7 +22,12 @@ router.post('/', (req, res) => {
 });
 
 async function loadWeather(id, city) {
-  // To implement
+  const data = await getWeatherData(city);
+
+  jobs[id] = {
+    status: 'done',
+    data
+  };
 }
 
 module.exports = router;
