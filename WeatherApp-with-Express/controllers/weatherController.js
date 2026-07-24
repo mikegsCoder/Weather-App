@@ -21,6 +21,16 @@ router.post('/', (req, res) => {
   res.redirect('/weather/' + id);
 });
 
+router.get('/:id', (req, res) => {
+  const job = jobs[req.params.id];
+
+  if (!job) {
+    return res.status(404).send('Job not found');
+  }
+
+  // To implement
+});
+
 async function loadWeather(id, city) {
   const data = await getWeatherData(city);
 
