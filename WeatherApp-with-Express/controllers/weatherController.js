@@ -34,7 +34,12 @@ router.get('/:id', (req, res) => {
       loading: true
     });
   }
-  
+
+  // no data:
+  if (!job.data) {
+    return res.render('partials/notFound');
+  }
+
   // To implement
 });
 
