@@ -28,6 +28,13 @@ router.get('/:id', (req, res) => {
     return res.status(404).send('Job not found');
   }
 
+  // still loading:
+  if (job.status === 'loading') {
+    return res.render('weather', {
+      loading: true
+    });
+  }
+  
   // To implement
 });
 
