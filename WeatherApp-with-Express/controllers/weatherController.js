@@ -40,7 +40,22 @@ router.get('/:id', (req, res) => {
     return res.render('partials/notFound');
   }
 
-  // To implement
+  // success:
+  const data = job.data;
+  console.log(data);
+
+  const generalData = createGeneralData(data);
+  const infoCardsData = createInfoCardsData(data);
+
+  const weatherData = {
+    generalData,
+    infoCardsData
+  };
+
+  res.render('weather', {
+    loading: false,
+    data: weatherData
+  });
 });
 
 async function loadWeather(id, city) {
