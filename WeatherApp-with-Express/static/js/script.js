@@ -2,6 +2,8 @@ document.body.classList.add('light');
 
 // add event listeners:
 document.getElementById('checkbox').addEventListener('click', toggleTheme);
+document.getElementById('input').addEventListener('input', handleInputChange);
+document.getElementById('inputForm').addEventListener('submit', handleSubmit);
 
 function toggleTheme() {
   if (document.body.classList.contains('dark')) {
