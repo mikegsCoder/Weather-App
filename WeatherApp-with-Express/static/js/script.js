@@ -27,3 +27,10 @@ function toggleTheme() {
     document.body.classList.add('dark');
   }
 }
+
+function handleSubmit(e) {
+  if(!city) {
+    e.preventDefault();
+    return;
+  }
+}
