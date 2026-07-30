@@ -6,6 +6,7 @@ const { createGeneralData } = require('../utils/createGeneralData');
 const { createInfoCardsData } = require('../utils/createInfoCardsData');
 
 const jobs = {};
+let city = '';
 
 router.post('/', (req, res) => {
   const id = crypto.randomUUID();
@@ -14,6 +15,8 @@ router.post('/', (req, res) => {
     status: 'loading',
     data: null
   };
+
+  city = req.body.city;
 
   // starting async task:
   loadWeather(id, req.body.city);
@@ -37,7 +40,7 @@ router.get('/:id', (req, res) => {
 
   // no data:
   if (!job.data) {
-    return res.render('partials/notFound');
+    return res.render('partials/notFound', {city});
   }
 
   // success:
