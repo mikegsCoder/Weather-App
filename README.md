@@ -12,12 +12,13 @@
 - VueJS and JavaScript for the VueJS project
 - React and TypeScript for the React project
 - Lit-HTML and JavaScript for the Lit-HTML project
-- Tailwind CSS and HTML for the Angular, VueJS, React, Blazor and Lit-HTML projects
+- Tailwind CSS and HTML for the Angular, VueJS, React, Blazor, Express and Lit-HTML projects
 - ASP and C# for the ASP project
 - WPF, XAML and C# for the WPF project
 - MAUI, XAML and and C# for the MAUI project
 - NEXT and TypeScript for the NEXT project
 - Blazor and C# for the Blazor project
+- Express and JavaScript for the Express project
 
 ## :framed_picture: Screenshot - Main Window Light Theme:
 
